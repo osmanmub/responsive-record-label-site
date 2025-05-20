@@ -3,56 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Alafia</title>
+  <title>Alafia Collective</title>
+
+  <!-- existing stylesheet -->
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/home.css">
-  <script type="text/javascript" src="js/script.js"></script>
+
+  <!-- script that already handles the mobile-menu checkbox -->
+  <script src="js/script.js" defer></script>
 </head>
 <body>
 
+  <!-- === NAVIGATION (same markup on every page before) === -->
   <header>
     <nav>
       <input type="checkbox" id="nav" class="hidden">
       <label for="nav" class="nav-btn">
-        <i></i>
-        <i></i>
-        <i></i>
+        <i></i><i></i><i></i>
       </label>
-     <div class="logo slide">
-  <a href="index.html">
-    <img src="assets/logo.png" alt="Alafia Logo" class="logo-img">
-  </a>
-</div>
+
+      <div class="logo">
+        <a href="#home"><img src="Img/logo.png" alt="Alafia logo" class="logo-img"></a>
+      </div>
+
       <div class="wide-nav">
         <ul>
-          <li class="slide"><a href="#">Home</a></li>
-          <li class="slide"><a href="artists.html">Artists</a></li>
-          <li class="slide"><a href="shows.html">Shows</a></li>
-          <li class="slide"><a href="merch.html">Merch</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#artists">Artists</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#playlist">Playlists</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#merch">Merch</a></li>
         </ul>
       </div>
+
       <div class="mobile-nav">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="artists.html">Artists</a></li>
-          <li><a href="shows.html">Shows</a></li>
-          <li><a href="merch.html">Merch</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#artists">Artists</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#playlist">Playlists</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#merch">Merch</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <main id="home">
-    <script>
-      document.querySelector('main').classList.add('fade-out');
-    </script>
-   <h1>Powering Africa’s Next Generation of Global Icons</h1>
-<p class="home-bio">
-  Alafia Collective is building a new model for African music success—one that connects raw talent to global platforms through structure, strategy, and sound. We are a full-suite creative partner providing management, label services, and publishing for Africa’s rising stars. <br><br>
-  Our mission is to bridge the gap between potential and commercial success by offering end-to-end support—from studio production to market strategy—powered by data, community, and cultural authenticity. Whether it’s developing new sounds, hosting collaborative music camps, or brokering international deals, we create the environment for African creativity to thrive. <br><br>
-  <em>Who’s behind the next breakout artist?</em> <strong>Alafia.</strong> <em>Where’s the future of African music headed?</em> <strong>Alafia.</strong> The answer is always Alafia.
-</p>
+  <!-- === CONTENT SECTIONS === -->
+  <main>
+
+    <!-- HOME ================================================= -->
+    <section id="home">
+      <!-- roster carousel -->
+      <div id="carousel">
+        <div class="slide-track">
+          <img src="Img/roster/artist1.jpg" class="slide" alt="">
+          <img src="Img/roster/artist2.jpg" class="slide" alt="">
+          <img src="Img/roster/artist3.jpg" class="slide" alt="">
+          <!-- duplicate once for seamless loop -->
+          <img src="Img/roster/artist1.jpg" class="slide" alt="">
+          <img src="Img/roster/artist2.jpg" class="slide" alt="">
+          <img src="Img/roster/artist3.jpg" class="slide" alt="">
+        </div>
+      </div>
+
+      <h1>Powering Africa’s Next Generation of Global Icons</h1>
+      <p class="home-bio">
+        Alafia Collective is building a new model for African music success—one that connects raw
+        talent to global platforms through structure, strategy, and sound. … (existing copy)
+      </p>
+    </section>
+
+    <!-- ARTISTS ============================================== -->
+    <section id="artists">
+      <h1>Artists</h1>
+
+      <div class="artist">
+        <img src="Img/matt.png" width="75%" alt="Hurricane Matthews">
+        <h2>HURRICANE MATTHEWS</h2>
+      </div>
+      <p class="artist-bio">An IT guy turned rap superstar …</p>
+
+      <div class="artist">
+        <img src="Img/mike.png" width="75%" alt="Scoota Doota">
+        <h2>SCOOTA DOOTA</h2>
+      </div>
+      <p class="artist-bio">When he's not pushing dope on the block …</p>
+
+      <!-- repeat for other roster members -->
+    </section>
+
+    <!-- EVENTS =============================================== -->
+    <section id="events">
+      <h1>Upcoming Events</h1>
+      <ul class="events">
+        <li><strong>12 Jun 2025</strong> – Lagos, Freedom Park</li>
+        <li><strong>28 Jun 2025</strong> – Nairobi, The Alchemist</li>
+      </ul>
+    </section>
+
+    <!-- PLAYLISTS ============================================ -->
+    <section id="playlist">
+      <h1>Featured Playlists</h1>
+      <iframe style="border:none;width:100%;max-width:600px;height:380px"
+              src="https://open.spotify.com/embed/playlist/PUT_PLAYLIST_ID_HERE"></iframe>
+    </section>
+
+    <!-- BLOG ================================================= -->
+    <section id="blog">
+      <h1>Blog</h1>
+      <article>
+        <h2>Site Launch</h2>
+        <p><time datetime="2025-05-20">20 May 2025</time></p>
+        <p>Alafia Collective is live! Future posts will appear here.</p>
+      </article>
+    </section>
+
+    <!-- MERCH (kept from original) =========================== -->
+    <section id="merch">
+      <h1>Merch</h1>
+      <p>Coming soon …</p>
+    </section>
 
   </main>
 
