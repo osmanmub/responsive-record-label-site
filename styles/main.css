@@ -338,3 +338,19 @@ main {
 .hidden {
   display: none;
 }
+
+/* === single-page layout tweaks === */
+section{
+  padding:4rem 1rem;
+  max-width:900px;
+  margin:0 auto;
+}
+section:not(:first-of-type){
+  border-top:1px solid #ddd;
+}
+
+/* roster carousel */
+#carousel{overflow:hidden;position:relative;height:200px;margin-bottom:2rem;}
+.slide-track{display:flex;width:max-content;animation:scroll 40s linear infinite;}
+.slide{width:200px;flex-shrink:0;opacity:.4;filter:grayscale(80%);}
+@keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(calc(-200px*3));}}
