@@ -96,6 +96,13 @@ nav {
 .logo {
   position: absolute;
   left: 3rem;
+}
+
+.logo-img {
+  height: 40px;  /* adjust size as needed */
+  width: auto;
+  display: block;
+}
 
 }
 
