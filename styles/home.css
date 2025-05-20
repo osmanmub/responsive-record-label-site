@@ -1,95 +1,273 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Alafia</title>
-    <link rel="stylesheet" href="styles/normalize.css"> <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/home.css">
-    </head>
-<body>
+/* ==========================================================================
+   Alafia Custom Styles - Dark Theme & Layout
+   ========================================================================== */
 
-    <header>
-        <nav>
-            <input type="checkbox" id="nav" class="hidden"/>
-            <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
-            <div class="logo slide"> <a href="index.html">Alafia</a>
-            </div>
-            <div class="wide-nav">
-                <ul>
-                    <li class="slide"><a href="index.html">Home</a></li>
-                    <li class="slide"><a href="artists.html">Artists</a></li>
-                    <li class="slide"><a href="services.html">Services</a></li>
-                    <li class="slide"><a href="events.html">Events</a></li>
-                    <li class="slide"><a href="playlist.html">Playlists</a></li>
-                    <li class="slide"><a href="blog.html">Blog</a></li>
-                    <li class="slide"><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+/* --- Basic Dark Theme Setup --- */
+body {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light grey text for readability */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Modern font stack */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-size: 16px; /* Base font size */
+}
 
-    <div class="homepage-wrapper">
-        <main id="home" class="main-content">
-            <section id="about-alafia-intro" class="content-section">
-                <h1>Welcome to Alafia</h1>
-                <p class="home-bio">
-                    Alafia is more than a name—it's a vision of balance, creativity, and sound. As an independent label and creative collective, Alafia nurtures producers, artists, and storytellers who are shaping the next wave of global music. From the studio to the stage, we empower original voices with the tools, networks, and spirit to thrive.
-                </p>
-                <p class="home-bio">
-                    <em>Who produced that beat?</em> <strong>Alafia.</strong> <em>Who's that new artist on the rise?</em> <strong>Alafia.</strong> The answer is always Alafia.
-                </p>
-                 <p>We are reshaping Africa's music industry by breaking down barriers that limit African talent from thriving globally, propelling artists to creative and commercial success by addressing the lack of structure and access to critical resources.</p>
-            </section>
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff; /* White headings */
+    font-weight: 600;
+    margin-top: 0; /* Remove default top margin from headings */
+    margin-bottom: 0.75em;
+}
 
-            <section id="homepage-highlights" class="content-section">
-                <h3>Latest Updates</h3>
-                <p>Stay tuned for exciting updates from Alafia Collective and our artists! <a href="blog.html">Visit our blog for more insights.</a></p>
-                <p>With over <strong>91M cumulative streams</strong>, our artists are making waves globally. Discover the sound of the next generation.</p>
-            </section>
-        </main>
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
 
-        <aside class="artist-sidebar">
-            <h3>Our Artists</h3>
-            <ul>
-                <li>
-                    <a href="artist-profile-trillxoe.html"> <img src="https://via.placeholder.com/50x50.png?text=TX" alt="Trill Xoe">
-                        <span>Trill Xoe</span> </a>
-                </li>
-                <li>
-                    <a href="artist-profile-artist1.html"> <img src="https://via.placeholder.com/50x50.png?text=A1" alt="Artist Name 1">
-                        <span>Artist Name 1</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="artist-profile-artist2.html"> <img src="https://via.placeholder.com/50x50.png?text=A2" alt="Artist Name 2">
-                        <span>Artist Name 2</span>
-                    </a>
-                </li>
-                </ul>
-            <a href="artists.html" class="view-all-artists-link">View All Artists</a>
-        </aside>
-    </div> <footer>
-        <p>&copy; <script>document.write(new Date().getFullYear())</script> Alafia Collective. All Rights Reserved.</p>
-        <p>
-            <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
-            </p>
-    </footer>
+p {
+    color: #c5c5c5;
+    margin-bottom: 1em;
+}
 
-    <script type="text/javascript" src="js/script.js"></script>
-    <script>
-        // Re-applying the fade-out logic if still desired, targeting the correct main element
-        // If you have transitions on 'fade-out', ensure it's defined in your CSS
-        // Consider if this script is still needed with the new structure or if it causes issues.
-        const mainElement = document.querySelector('main#home');
-        if (mainElement) {
-            // It's often better to trigger animations after page load or with Intersection Observer
-            // For now, let's ensure it doesn't break.
-            // If fade-out is for page transitions, this might need more sophisticated handling.
-            // For simplicity, I'll comment it out if it was for initial page load.
-            // mainElement.classList.add('fade-out');
-        }
-    </script>
-</body>
-</html>
+a {
+    color: #bb86fc; /* Primary accent color (Material Design dark theme purple) */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+a:hover, a:focus {
+    color: #9a67d3; /* Darker shade for hover/focus */
+    text-decoration: underline;
+}
+
+/* --- Header & Navigation Styling (Based on your provided HTML structure) --- */
+header {
+    background-color: #1c1c1c; /* Slightly lighter dark for header */
+    padding: 0.5em 0; /* Adjust padding */
+    border-bottom: 1px solid #333;
+    position: sticky; /* Makes header stick to top */
+    top: 0;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+nav {
+    max-width: 1200px; /* Limit nav width */
+    margin: 0 auto; /* Center nav */
+    padding: 0 20px; /* Padding inside nav */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+.logo a:hover, .logo a:focus {
+    color: #bb86fc;
+    text-decoration: none;
+}
+
+.wide-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.wide-nav ul li {
+    margin-left: 20px;
+}
+
+.wide-nav ul li a {
+    color: #e0e0e0;
+    font-weight: 500;
+    padding: 0.5em 0.8em;
+    border-radius: 4px;
+}
+
+.wide-nav ul li a:hover,
+.wide-nav ul li a.active { /* Assuming you might add an 'active' class for current page */
+    color: #121212;
+    background-color: #bb86fc;
+    text-decoration: none;
+}
+
+/* Hamburger Menu (basic styling, your JS will handle the open/close) */
+.hidden { display: none; }
+.nav-open { /* Basic style, you'll need to style the <i> bars */
+    display: none; /* Hidden on wider screens */
+    cursor: pointer;
+}
+.nav-open i {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    border-radius: 1px;
+}
+
+
+/* --- Footer Basic Dark Styling --- */
+footer {
+    background-color: #1c1c1c;
+    color: #a0a0a0;
+    padding: 2em 20px;
+    text-align: center;
+    border-top: 1px solid #333;
+    margin-top: 40px; /* Space above footer */
+}
+
+footer p {
+    color: #a0a0a0;
+    margin: 0.5em 0;
+}
+
+footer a {
+    color: #bb86fc;
+}
+
+footer a:hover, footer a:focus {
+    color: #9a67d3;
+}
+
+
+/* --- Homepage Two-Column Layout --- */
+.homepage-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allows sidebar to stack on smaller screens */
+    padding: 20px;
+    gap: 30px; /* Space between main content and sidebar */
+    max-width: 1200px;
+    margin: 20px auto; /* Add some top/bottom margin for the wrapper too */
+}
+
+.main-content {
+    flex: 3; /* Main content takes up more space */
+    min-width: 0; /* Prevents flex items from overflowing if content is too wide */
+}
+
+.artist-sidebar {
+    flex: 1; /* Sidebar takes up less space */
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 8px;
+    min-width: 260px; /* Minimum width before it wraps or squishes too much */
+    height: fit-content;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* Subtle shadow */
+}
+
+.artist-sidebar h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.6em;
+    margin-bottom: 1.2em;
+    font-size: 1.5em;
+    color: #e0e0e0;
+}
+
+.artist-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.artist-sidebar li a {
+    display: flex;
+    align-items: center;
+    color: #d0d0d0;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.artist-sidebar li a:hover, .artist-sidebar li a:focus {
+    background-color: #2a2a2a; /* Darker hover for sidebar items */
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.artist-sidebar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+    border: 2px solid #555;
+}
+
+.artist-sidebar .view-all-artists-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #bb86fc;
+    color: #121212;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.artist-sidebar .view-all-artists-link:hover,
+.artist-sidebar .view-all-artists-link:focus {
+    background-color: #9a67d3;
+    color: #000000;
+    text-decoration: none;
+}
+
+/* --- General Content Sections on Homepage --- */
+.content-section {
+    background-color: #1e1e1e;
+    padding: 25px 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.content-section:last-child {
+    margin-bottom: 0; /* No margin for the last section in main-content */
+}
+
+.content-section h1, .content-section h2, .content-section h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.8em;
+}
+.content-section .home-bio {
+    font-size: 1.1em;
+    line-height: 1.7;
+}
+
+
+/* --- Responsive Adjustments for Hamburger and Layout --- */
+@media (max-width: 768px) {
+    .wide-nav {
+        display: none; /* Hide wide nav on small screens */
+        /* Your JS and CSS would handle showing it as a dropdown/overlay */
+    }
+    .nav-open {
+        display: block; /* Show hamburger icon */
+    }
+
+    .homepage-wrapper {
+        flex-direction: column;
+        gap: 20px; /* Adjust gap for stacked layout */
+        margin-top: 10px;
+        padding: 15px;
+    }
+
+    .main-content {
+        margin-bottom: 0; /* Gap handles spacing */
+    }
+    .content-section {
+        padding: 20px;
+    }
+    .artist-sidebar {
+        width: 100%; /* Full width when stacked */
+        margin-top: 0; /* Gap handles spacing */
+    }
+}
