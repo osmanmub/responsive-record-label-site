@@ -3,72 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Record Label Name | Home</title>
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/main.css">
-  <script src="js/script.js" defer></script>
+  <title>Alafia Collective | Home</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
 
- <header>
-  <nav class="nav-container">
-    <a href="index.html" class="logo-link"><img src="assets/img/logo.png" alt="Alafia Collective" class="logo-img" /></a>
-    <ul class="nav-list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="artists.html">Artists</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="merch.html">Merch</a></li>
-    </ul>
-  </nav>
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="nav-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/logo.png" alt="Alafia Collective" class="logo-img">
+      </a>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="merch.html">Merch</a></li>
+      </ul>
+    </nav>
+  </header>
 
- </header>
+  <!-- Main Content -->
+  <main>
 
-  <main id="home-main">
-    <script>
-      // Apply fade-out for transition if not on the initially loaded page or add on click
-      // For simplicity, this script fades in the main content on any page load.
-      // The script.js removes 'fade-out' on load.
-      // If you navigate from another page, you might add 'fade-out' then script.js handles it.
-      // document.querySelector('main').classList.add('fade-out');
-    </script>
-
-    <section id="hero-carousel">
-      <h1 class="page-title">Featured Artists & Releases</h1>
-      <div id="carousel">
-        <div class="slide-track">
-          <img src="img/placeholder_carousel1.jpg" class="slide" alt="Featured Artist 1 / Release 1">
-          <img src="img/placeholder_carousel2.jpg" class="slide" alt="Featured Artist 2 / Release 2">
-          <img src="img/placeholder_carousel3.jpg" class="slide" alt="Featured Artist 3 / Release 3">
-          <img src="img/placeholder_carousel1.jpg" class="slide" alt="Featured Artist 1 / Release 1">
-          <img src="img/placeholder_carousel2.jpg" class="slide" alt="Featured Artist 2 / Release 2">
-          <img src="img/placeholder_carousel3.jpg" class="slide" alt="Featured Artist 3 / Release 3">
-        </div>
+    <!-- Hero Carousel -->
+    <section id="hero-carousel" class="mt-md mb-lg">
+      <div class="slide-track">
+        <img src="assets/img/carousel1.jpg" alt="Featured 1" class="slide">
+        <img src="assets/img/carousel2.jpg" alt="Featured 2" class="slide">
+        <img src="assets/img/carousel3.jpg" alt="Featured 3" class="slide">
+        <!-- Repeat for smooth loop -->
       </div>
     </section>
 
-    <section id="about">
-      <h2>Welcome to Record Label Name</h2>
-      <p>
-        We are dedicated to discovering, nurturing, and promoting exceptional musical talent from around the globe. Our mission is to connect artists with audiences and build lasting careers. (Replace with your label's actual mission statement and introduction).
+    <!-- About Section -->
+    <section id="about" class="section grid grid-cols-1 mt-md mb-lg">
+      <h2 class="text-center" style="font-size: var(--font-xl);">Welcome to Alafia Collective</h2>
+      <p class="text-center" style="font-size: var(--font-base); max-width: 800px; margin: auto;">
+        Alafia Collective is dedicated to discovering, nurturing, and promoting exceptional musical talent from around the globe. Our mission is to connect artists with audiences and build lasting careers.
       </p>
     </section>
 
-    <section id="new-releases">
-      <h2>New Releases</h2>
-      <div style="text-align: center; padding: 2rem; border: 1px dashed #ccc;">
-        <p>Placeholder for New Releases. You can list new albums, singles, or music videos here with links and artwork.</p>
-        <p><em>Example: Artist X - New Album "Title" - Out Now!</em></p>
+    <!-- New Releases Grid -->
+    <section id="new-releases" class="grid grid-cols-1 grid-cols-2--bp-mobile grid-cols-3--bp-tablet mt-md mb-lg">
+      <div class="card">
+        <img src="assets/img/release1.jpg" alt="Release 1">
+        <div class="card-body">
+          <h3 class="card-title">Artist X – New Album</h3>
+          <p class="card-text">Latest album from Artist X, blending genres and pushing boundaries.</p>
+          <button class="btn-primary">Listen Now</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/img/release2.jpg" alt="Release 2">
+        <div class="card-body">
+          <h3 class="card-title">Artist Y – Single Release</h3>
+          <p class="card-text">Discover the new single that’s topping the charts.</p>
+          <button class="btn-primary">Listen Now</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/img/release3.jpg" alt="Release 3">
+        <div class="card-body">
+          <h3 class="card-title">Artist Z – EP Drop</h3>
+          <p class="card-text">Explore the fresh EP from Artist Z.</p>
+          <button class="btn-primary">Listen Now</button>
+        </div>
       </div>
     </section>
 
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p style="text-align:center; padding: 2rem; border-top: 1px solid #eee;">&copy; <span id="year"></span> Record Label Name. All Rights Reserved.</p>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <p>&copy; <span id="year"></span> Alafia Collective. All Rights Reserved.</p>
   </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
