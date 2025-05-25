@@ -1,14 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>I D K</title>
-      <link rel="stylesheet" href="styles/main.css">
-      <link rel="stylesheet" href="styles/home.css">
-      <script type="text/javascript" src="js/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Record Label | Home</title>
+
+  <link rel="stylesheet" href="styles/main.css">
+
+  <script src="js/script.js" defer></script>
 </head>
 <body>
 
@@ -16,45 +15,102 @@
     <nav>
       <input type="checkbox" id="nav" class="hidden">
       <label for="nav" class="nav-btn">
-        <i></i>
-        <i></i>
-        <i></i>
+        <i></i><i></i><i></i>
       </label>
-      <div class="logo slide">
-        <a href="#">alafia</a>
+
+      <div class="logo">
+        <a href="#home"><img src="Img/placeholder_logo.png" alt="Label Logo" class="logo-img"></a>
       </div>
+
       <div class="wide-nav">
         <ul>
-          <li class="slide"><a href="#">Home</a></li>
-          <li class="slide"><a href="artists.html">Artists</a></li>
-          <li class="slide"><a href="shows.html">Events</a></li>
-          <li class="slide"><a href="merch.html">Playlists</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#artists">Artists</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#playlist">Playlists</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#merch">Merch</a></li>
         </ul>
       </div>
+
       <div class="mobile-nav">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="artists.html">Artists</a></li>
-          <li><a href="shows.html">Shows</a></li>
-          <li><a href="merch.html">Merch</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#artists">Artists</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#playlist">Playlists</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#merch">Merch</a></li>
         </ul>
       </div>
     </nav>
-      </header>
+  </header>
 
+  <main>
 
+    <section id="home">
+      <div id="carousel">
+        <div class="slide-track">
+          <img src="Img/placeholder_roster1.jpg" class="slide" alt="Artist Roster Image 1">
+          <img src="Img/placeholder_roster2.jpg" class="slide" alt="Artist Roster Image 2">
+          <img src="Img/placeholder_roster3.jpg" class="slide" alt="Artist Roster Image 3">
+          <img src="Img/placeholder_roster1.jpg" class="slide" alt="Artist Roster Image 1">
+          <img src="Img/placeholder_roster2.jpg" class="slide" alt="Artist Roster Image 2">
+          <img src="Img/placeholder_roster3.jpg" class="slide" alt="Artist Roster Image 3">
+        </div>
+      </div>
 
-      <main id="home">
-        <script>
-          document.querySelector('main').classList.add('fade-out');
-        </script>
-        <h1>What is alafia?</h1>
-          <p class="home-bio">
-            
-            <em>Whoa that song was fire, do you know who made that?</em>&nbsp;<strong>alafia</strong> <em>I really need someone
-            to make a dope beat for me. Do you know anyone?</em>&nbsp;<strong>alafia</strong> <em>I'm trying to go to a
-            concert. Know any good acts?</em>&nbsp;<strong>alafia!</strong> The answer is always alafia
-          </p>
-      </main>
+      <h1>Showcasing Emerging Musical Talent</h1>
+      <p class="home-bio">
+        Our Label is dedicated to discovering and nurturing the next generation of musical icons. We provide structure, strategy, and support to connect raw talent with global audiences. (Placeholder text: add your label's mission here.)
+      </p>
+    </section>
+
+    <section id="artists">
+      <h1>Artists</h1>
+
+      <div class="artist">
+        <img src="Img/placeholder_artist1.jpg" width="75%" alt="Artist Name 1">
+        <h2>ARTIST NAME 1</h2>
+      </div>
+      <p class="artist-bio">Placeholder bio for Artist Name 1. Describe their unique sound and journey.</p>
+
+      <div class="artist">
+        <img src="Img/placeholder_artist2.jpg" width="75%" alt="Artist Name 2">
+        <h2>ARTIST NAME 2</h2>
+      </div>
+      <p class="artist-bio">Placeholder bio for Artist Name 2. Highlight their achievements and musical style.</p>
+
+      </section>
+
+    <section id="events">
+      <h1>Upcoming Events</h1>
+      <ul class="events">
+        <li><strong>Month Day, Year</strong> – City, Venue Name</li>
+        <li><strong>Month Day, Year</strong> – City, Venue Name</li>
+      </ul>
+    </section>
+
+    <section id="playlist">
+      <h1>Featured Playlists</h1>
+      <p>Check out our curated playlists. (Placeholder: You can embed a playlist here or link to streaming services.)</p>
+      </section>
+
+    <section id="blog">
+      <h1>Blog</h1>
+      <article>
+        <h2>Latest News Title</h2>
+        <p><time datetime="YYYY-MM-DD">Month Day, Year</time></p>
+        <p>Placeholder text for a blog post. Future updates and news will appear here.</p>
+      </article>
+    </section>
+
+    <section id="merch">
+      <h1>Merch</h1>
+      <p>Coming soon … (Or link to your merch page/store)</p>
+    </section>
+
+  </main>
+
 </body>
 </html>
