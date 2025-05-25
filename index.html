@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Record Label | Home</title>
-
+  <title>Record Label Name | Home</title>
+  <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/main.css">
-
   <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -17,100 +16,76 @@
       <label for="nav" class="nav-btn">
         <i></i><i></i><i></i>
       </label>
-
       <div class="logo">
-        <a href="#home"><img src="Img/placeholder_logo.png" alt="Label Logo" class="logo-img"></a>
+        <a href="index.html"><img src="img/placeholder_logo.png" alt="Record Label Logo" class="logo-img"></a>
       </div>
-
       <div class="wide-nav">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#artists">Artists</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#playlist">Playlists</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#merch">Merch</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="artists.html">Artists</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="playlists.html">Playlists</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="merch.html">Merch</a></li>
         </ul>
       </div>
-
       <div class="mobile-nav">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#artists">Artists</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#playlist">Playlists</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#merch">Merch</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="artists.html">Artists</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="playlists.html">Playlists</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="merch.html">Merch</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <main>
+  <main id="home-main">
+    <script>
+      // Apply fade-out for transition if not on the initially loaded page or add on click
+      // For simplicity, this script fades in the main content on any page load.
+      // The script.js removes 'fade-out' on load.
+      // If you navigate from another page, you might add 'fade-out' then script.js handles it.
+      // document.querySelector('main').classList.add('fade-out');
+    </script>
 
-    <section id="home">
+    <section id="hero-carousel">
+      <h1 class="page-title">Featured Artists & Releases</h1>
       <div id="carousel">
         <div class="slide-track">
-          <img src="Img/placeholder_roster1.jpg" class="slide" alt="Artist Roster Image 1">
-          <img src="Img/placeholder_roster2.jpg" class="slide" alt="Artist Roster Image 2">
-          <img src="Img/placeholder_roster3.jpg" class="slide" alt="Artist Roster Image 3">
-          <img src="Img/placeholder_roster1.jpg" class="slide" alt="Artist Roster Image 1">
-          <img src="Img/placeholder_roster2.jpg" class="slide" alt="Artist Roster Image 2">
-          <img src="Img/placeholder_roster3.jpg" class="slide" alt="Artist Roster Image 3">
+          <img src="img/placeholder_carousel1.jpg" class="slide" alt="Featured Artist 1 / Release 1">
+          <img src="img/placeholder_carousel2.jpg" class="slide" alt="Featured Artist 2 / Release 2">
+          <img src="img/placeholder_carousel3.jpg" class="slide" alt="Featured Artist 3 / Release 3">
+          <img src="img/placeholder_carousel1.jpg" class="slide" alt="Featured Artist 1 / Release 1">
+          <img src="img/placeholder_carousel2.jpg" class="slide" alt="Featured Artist 2 / Release 2">
+          <img src="img/placeholder_carousel3.jpg" class="slide" alt="Featured Artist 3 / Release 3">
         </div>
       </div>
+    </section>
 
-      <h1>Showcasing Emerging Musical Talent</h1>
-      <p class="home-bio">
-        Our Label is dedicated to discovering and nurturing the next generation of musical icons. We provide structure, strategy, and support to connect raw talent with global audiences. (Placeholder text: add your label's mission here.)
+    <section id="about">
+      <h2>Welcome to Record Label Name</h2>
+      <p>
+        We are dedicated to discovering, nurturing, and promoting exceptional musical talent from around the globe. Our mission is to connect artists with audiences and build lasting careers. (Replace with your label's actual mission statement and introduction).
       </p>
     </section>
 
-    <section id="artists">
-      <h1>Artists</h1>
-
-      <div class="artist">
-        <img src="Img/placeholder_artist1.jpg" width="75%" alt="Artist Name 1">
-        <h2>ARTIST NAME 1</h2>
+    <section id="new-releases">
+      <h2>New Releases</h2>
+      <div style="text-align: center; padding: 2rem; border: 1px dashed #ccc;">
+        <p>Placeholder for New Releases. You can list new albums, singles, or music videos here with links and artwork.</p>
+        <p><em>Example: Artist X - New Album "Title" - Out Now!</em></p>
       </div>
-      <p class="artist-bio">Placeholder bio for Artist Name 1. Describe their unique sound and journey.</p>
-
-      <div class="artist">
-        <img src="Img/placeholder_artist2.jpg" width="75%" alt="Artist Name 2">
-        <h2>ARTIST NAME 2</h2>
-      </div>
-      <p class="artist-bio">Placeholder bio for Artist Name 2. Highlight their achievements and musical style.</p>
-
-      </section>
-
-    <section id="events">
-      <h1>Upcoming Events</h1>
-      <ul class="events">
-        <li><strong>Month Day, Year</strong> – City, Venue Name</li>
-        <li><strong>Month Day, Year</strong> – City, Venue Name</li>
-      </ul>
-    </section>
-
-    <section id="playlist">
-      <h1>Featured Playlists</h1>
-      <p>Check out our curated playlists. (Placeholder: You can embed a playlist here or link to streaming services.)</p>
-      </section>
-
-    <section id="blog">
-      <h1>Blog</h1>
-      <article>
-        <h2>Latest News Title</h2>
-        <p><time datetime="YYYY-MM-DD">Month Day, Year</time></p>
-        <p>Placeholder text for a blog post. Future updates and news will appear here.</p>
-      </article>
-    </section>
-
-    <section id="merch">
-      <h1>Merch</h1>
-      <p>Coming soon … (Or link to your merch page/store)</p>
     </section>
 
   </main>
+
+  <footer>
+    <p style="text-align:center; padding: 2rem; border-top: 1px solid #eee;">&copy; <span id="year"></span> Record Label Name. All Rights Reserved.</p>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
 
 </body>
 </html>
