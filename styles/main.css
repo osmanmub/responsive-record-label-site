@@ -1,467 +1,57 @@
+/* main.css */
+
+:root {
+  /* Colors */
+  --primary-teal: #2C9C9F;
+  --secondary-charcoal: #333333;
+  --accent-terracotta: #D26A1D;
+  --neutral-light: #F5F5F5;
+  --neutral-dark: #1A1A1A;
+
+  /* Typography */
+  --font-family: 'Poppins', sans-serif;
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-base: 1rem;
+  --font-md: 1.25rem;
+  --font-lg: 1.5rem;
+  --font-xl: 2rem;
+  --font-2xl: 2.5rem;
+
+  /* Spacing */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+
+  /* Breakpoints */
+  --bp-mobile: 600px;
+  --bp-tablet: 1024px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+/* Base Reset and Typography */
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,700');
-
-* {
-      box-sizing: border-box;
-}
-
-html {
-  background-color: #fefefe;
-}
-
-body {
-  font-family: 'Poppins', sans-serif; /* Added sans-serif fallback */
-  background-color: #fefefe;
-}
-
-main {
-  opacity: 1;
-  transition: 1s opacity;
-  display: grid;
-  margin-top: 3rem;
-  font-size: 1.1rem;
-}
-
-main.fade-out {
-  opacity: 0;
-  transition: none;
-}
-
-/* Home Page Specific Grid */
-main#home-main { /* Changed from #home to avoid conflict if used as ID on a section */
-  grid-template-columns: auto;
-}
-
-main#home-main p { /* Assuming this was for the home bio */
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-/* Artists Page Specific Grid */
-main#artists-main, section#artists { /* For artists page and section */
-  grid-template-columns: auto auto;
-  align-items: center;
-  grid-column-gap: 2.5%;
-  grid-row-gap: 10%;
-}
-
-main#artists-main .artist, section#artists .artist {
-  text-align: center;
-}
-
-main#artists-main .artist-bio, section#artists .artist-bio {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-main#artists-main img, section#artists img { /* Applied to images within artists section/page */
-  width: 75%;
-  max-width: 250px; /* Added max-width for better control */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Helps with centering if margin auto is used */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Events/Shows Page Specific Grid */
-main#events-main, section#events { /* For events page and section, formerly #shows */
-  grid-template-columns: auto auto;
-  grid-gap: 10%;
-  justify-content: center;
-  align-items: center;
-}
-
-.date {
-  text-align: center;
-  display: block;
-}
-
-.date h1 {
-  font-size: 5vw;
-}
-
-.date h2 {
-  font-size: 4vw;
-}
-
-/* Merch Page Specific Grid */
-main#merch-main, section#merch { /* For merch page and section */
-  grid-template-columns: auto auto auto auto;
-  text-align: center;
-  justify-content: center;
-  grid-gap: 7%;
-}
-
-/* Playlist Page Specific Grid */
-main#playlists-main .playlist-tiles {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive tiles */
-  grid-gap: 1rem;
-  text-align: center;
-}
-
-main#playlists-main .playlist-tile {
-  border: 1px solid #ddd;
-  padding: 1rem;
-}
-
-main#playlists-main .playlist-tile img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
-
-
-nav {
-  padding: 1rem;
-  overflow: hidden;
-  background-color: #fefefe;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: uppercase;
-  border-bottom: 1px solid #eee; /* Added a subtle border */
-}
-
-.logo {
-  position: absolute; /* This was in main.css before */
-  left: 3rem;
-}
-
-.logo-img {
-  height: 40px;  /* adjust size as needed */
-  width: auto;
-  display: block;
-}
-/* Removed extra closing brace that was here */
-
-.logo a { /* Style for the link within logo div */
-  color: #000;
-  font-weight: 700;
-  font-size: 2.5rem; /* This was for text logo, adjust if needed for image logo */
-  letter-spacing: 0px;
-  text-decoration: none;
-}
-
-nav ul {
-  list-style-type: none; /* Remove default list styles */
-  padding: 0;
-  margin: 0; /* Remove default margins */
-  float: right; /* This was in main.css */
-}
-
-nav ul li {
-  display: inline-block;
-  float: left; /* This was in main.css */
-}
-
-@keyframes slideIn { /* This was in home.css, moved here for general use or can be kept separate */
-  from {
-    /* transform: translateX(-100rem); or translateX(100rem) based on original use */
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-nav ul li:not(:first-child) {
-  margin-left: 48px;
-}
-
-nav ul li:last-child {
-  margin-right: 24px;
-}
-
-nav ul li a {
-  display: inline-block;
-  outline: none;
-  color: #000;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 1.25rem;
-  letter-spacing: 1.2px;
-  font-weight: 600;
-}
-
-nav ul li a:hover {
-  color: #d26a1d; /* Original hover color */
-}
-
-main { /* General main padding, ensure this is what you want for all main sections */
-  padding: 1rem 10%;
-}
-
-/* Media Queries */
-@media screen and (max-width: 1000px){
-  main#merch-main, section#merch {
-    grid-template-columns: auto auto;
-    grid-row-gap: 4%;
-  }
-}
-
-@media screen and (min-width: 701px){
-  .mobile-nav {
-    display: none;
-  }
-  .nav-btn { /* Hide hamburger button on wider screens */
-    display: none;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .logo {
-    padding: 0;
-    position: static; /* Logo behavior on mobile */
-  }
-
-  .wide-nav {
-    display: none;
-  }
-
-  .mobile-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Starts hidden */
-    background: #111;
-    opacity: 0;
-    transition: all 0.2s ease;
-    padding-top: 60px; /* Adjust so content is below header area */
-  }
-
-  .mobile-nav ul {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    padding: 0; /* Reset padding */
-    margin: 0; /* Reset margin */
-    list-style-type: none; /* Ensure no bullets */
-  }
-
-  .mobile-nav ul li {
-    display: block;
-    float: none;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1.2rem;
-  }
-
-  .mobile-nav ul li:nth-child(1) a {
-    transition-delay: 0.2s;
-  }
-
-  .mobile-nav ul li:nth-child(2) a {
-    transition-delay: 0.3s;
-  }
-
-  .mobile-nav ul li:nth-child(3) a {
-    transition-delay: 0.4s;
-  }
-
-  .mobile-nav ul li:nth-child(4) a { /* Add more if more menu items */
-    transition-delay: 0.5s;
-  }
-   .mobile-nav ul li:nth-child(5) a {
-    transition-delay: 0.6s;
-  }
-   .mobile-nav ul li:nth-child(6) a {
-    transition-delay: 0.7s;
-  }
-
-
-  .mobile-nav ul li:not(:first-child) {
-    margin-left: 0;
-  }
-
-  .mobile-nav ul li a {
-    padding: 10px 24px;
-    opacity: 0; /* Start hidden for transition */
-    color: #fefefe;
-    font-size: 2rem; /* Adjusted for better readability */
-    font-weight: 600;
-    letter-spacing: 1.2px;
-    transform: translateX(-20px); /* Start off-screen for transition */
-    transition: all 0.2s ease; /* General transition for properties */
-  }
-
-  .nav-btn { /* Hamburger button styles */
-    position: fixed; /* Keeps it in view */
-    right: 1rem;
-    top: 1rem; /* Align with padding */
-    display: block;
-    width: 48px;
-    height: 48px;
-    cursor: pointer;
-    z-index: 9999; /* Above mobile nav before it's active */
-    border-radius: 50%;
-  }
-
-  .nav-btn i { /* Hamburger icon lines */
-    display: block;
-    width: 30px;
-    height: 4px; /* Slightly thicker */
-    background: #000;
-    border-radius: 2px;
-    margin-left: auto; /* Centering lines */
-    margin-right: auto;
-    transition: all 0.2s ease; /* Transition for animation */
-  }
-
-  .nav-btn i:nth-child(1) {
-    margin-top: 12px; /* Adjust spacing */
-  }
-
-  .nav-btn i:nth-child(2) {
-    margin-top: 6px; /* Adjust spacing */
-    opacity: 1;
-  }
-
-  .nav-btn i:nth-child(3) {
-    margin-top: 6px; /* Adjust spacing */
-  }
-
-  /* Page specific adjustments for mobile */
-  main#artists-main, section#artists {
-    grid-template-columns: auto; /* Single column on mobile */
-    grid-gap: 2.5%;
-  }
-
-  main#events-main, section#events {
-    grid-template-columns: auto; /* Single column on mobile */
-    grid-gap: 10%;
-    text-align: center;
-  }
-
-  main#events-main div:not(.date), section#events div:not(.date) { /* Refers to shows.html structure */
-    position: relative;
-    bottom: 0; /* Removed negative positioning, adjust if needed */
-  }
-
-  .date h1 {
-    font-size: 2.5rem; /* Adjusted for mobile */
-  }
-
-  .date h2 {
-    font-size: 2rem; /* Adjusted for mobile */
-  }
-
-  main#merch-main, section#merch {
-    grid-template-columns: auto; /* Single column on mobile */
-    grid-row-gap: 2%;
-  }
-  main#playlists-main .playlist-tiles {
-    grid-template-columns: auto; /* Single column for playlist tiles on mobile */
-  }
-}
-
-/* Mobile Nav Checkbox Interactions */
-#nav:checked + .nav-btn {
-  transform: rotate(45deg); /* Part of hamburger to X animation */
-}
-
-#nav:checked + .nav-btn i {
-  background: #fefefe; /* Lines change color for visibility on dark background */
-}
-
-#nav:checked + .nav-btn i:nth-child(1) {
-  transform: translateY(10px) rotate(180deg); /* Animation for top line */
-}
-
-#nav:checked + .nav-btn i:nth-child(2) {
-  opacity: 0; /* Middle line disappears */
-}
-
-#nav:checked + .nav-btn i:nth-child(3) {
-  transform: translateY(-10px) rotate(90deg); /* Animation for bottom line, adjusted for 4px height */
-}
-
-#nav:checked ~ .mobile-nav {
-  z-index: 9990; /* Bring mobile nav to front */
-  opacity: 1;
-}
-
-#nav:checked ~ .mobile-nav ul li a {
-  opacity: 1;
-  transform: translateX(0); /* Links slide in */
-}
-
-.hidden {
-  display: none;
-}
-
-/* === single-page layout tweaks from original (can be removed if not using sections in index.html) === */
-section { /* General section styling */
-  padding:2rem 1rem; /* Adjusted padding */
-  max-width:900px;
-  margin:0 auto;
-}
-section:not(:first-of-type){ /* For sections on a single page */
-  border-top:1px solid #ddd;
-}
-
-/* Roster carousel styles */
-#carousel{
-  overflow:hidden;
-  position:relative;
-  height:300px; /* Increased height for more impact */
-  margin-bottom:2rem;
-  background-color: #f0f0f0; /* Added a background for when images are loading */
-}
-.slide-track{
-  display:flex;
-  width:max-content; /* Should be calculated based on number of slides * slide width */
-  animation:scroll 40s linear infinite;
-}
-.slide{
-  width:250px; /* Adjusted slide width */
-  height: 300px; /* Match carousel height */
-  object-fit: cover; /* Ensures images cover the slide area */
-  flex-shrink:0;
-  opacity:.6; /* Slightly more visible */
-  filter:grayscale(50%); /* Reduced grayscale for more color */
-  transition: opacity 0.3s ease, filter 0.3s ease; /* Smooth transition on hover */
-}
-.slide:hover {
-    opacity: 1;
-    filter: grayscale(0%);
-}
-
-@keyframes scroll{
-  0%{transform:translateX(0);}
-  /* Adjust -250px*N based on number of unique slides (N) before repeating */
-  100%{transform:translateX(calc(-250px*3));} /* Assuming 3 unique slides before repeat */
-}
-
-/* General page title styling */
-h1.page-title {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-}
-
-/* Blog page specific styles */
-#blog-main article {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-#blog-main article:last-child {
-    border-bottom: none;
-}
-#blog-main h2 {
-    margin-top: 0;
-}
-
-/* Events page specific styles */
-#events-main .event-item {
-    border: 1px solid #eee;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    background-color: #f9f9f9;
-}
-#events-main .event-item h3 {
-    margin-top: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: var(--font-base); background: var(--neutral-light); color: var(--secondary-charcoal); }
+body { font-family: var(--font-family); line-height: 1.6; }
+
+/* Layout & Utilities */
+main { padding: var(--space-lg) var(--space-md); display: block; }
+section { max-width: 1200px; margin: 0 auto var(--space-lg); }
+
+.text-center { text-align: center; }
+.mt-md { margin-top: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+
+/* Responsive Grid */
+.grid { display: grid; grid-gap: var(--space-md); }
+@media (min-width: var(--bp-mobile)) { .grid-cols-2 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: var(--bp-tablet)) { .grid-cols-3 { grid-template-columns: repeat(3, 1fr); } }
