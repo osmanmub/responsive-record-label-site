@@ -4,7 +4,8 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Record Label | Merch</title>
+      <title>Record Label Name | Merch</title>
+      <link rel="stylesheet" href="styles/normalize.css">
       <link rel="stylesheet" href="styles/main.css">
       <script type="text/javascript" src="js/script.js"></script>
 </head>
@@ -14,80 +15,94 @@
     <nav>
       <input type="checkbox" id="nav" class="hidden">
       <label for="nav" class="nav-btn">
-        <i></i>
-        <i></i>
-        <i></i>
+        <i></i><i></i><i></i>
       </label>
       <div class="logo">
-        <a href="index.html"><img src="Img/placeholder_logo.png" alt="Label Logo" class="logo-img" style="height: 40px;"></a>
+        <a href="index.html"><img src="img/placeholder_logo.png" alt="Record Label Logo" class="logo-img"></a>
       </div>
       <div class="wide-nav">
         <ul>
-          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="artists.html">Artists</a></li>
-          <li><a href="shows.html">Shows</a></li>
-          <li><a href="merch.html">Merch</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="playlists.html">Playlists</a></li>
           <li><a href="blog.html">Blog</a></li>
+          <li><a href="merch.html">Merch</a></li>
         </ul>
       </div>
       <div class="mobile-nav">
         <ul>
-          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="artists.html">Artists</a></li>
-          <li><a href="shows.html">Shows</a></li>
-          <li><a href="merch.html">Merch</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="playlists.html">Playlists</a></li>
           <li><a href="blog.html">Blog</a></li>
+          <li><a href="merch.html">Merch</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <main id="merch">
+  <main id="merch-main">
     <script>
       document.querySelector('main').classList.add('fade-out');
     </script>
+    <h1 class="page-title">Official Merchandise</h1>
 
     <div class="merch">
-      <img src="Img/placeholder_merch1.jpg" width="200px" alt="Merch Item 1">
-      <h3>"ITEM NAME 1"</h3>
-      <p>$XX.XX</p>
+      <img src="img/placeholder_merch1.jpg" width="200px" alt="Generic T-Shirt">
+      <h3>"LABEL LOGO TEE"</h3>
+      <p>$25.00</p>
+      <button>Add to Cart (Placeholder)</button>
     </div>
     <div class="merch">
-      <img src="Img/placeholder_merch2.jpg" width="200px" alt="Merch Item 2">
-      <h3>"ITEM NAME 2"</h3>
-      <p>$XX.XX</p>
+      <img src="img/placeholder_merch2.jpg" width="200px" alt="Generic Hoodie">
+      <h3>"ARTIST ALBUM HOODIE"</h3>
+      <p>$45.00</p>
+      <button>Add to Cart (Placeholder)</button>
     </div>
     <div class="merch">
-      <img src="Img/placeholder_merch3.jpg" width="200px" alt="Merch Item 3">
-      <h3>"ITEM NAME 3"</h3>
-      <p>$XX.XX</p>
+      <img src="img/placeholder_merch3.jpg" width="200px" alt="Generic Cap">
+      <h3>"SIGNATURE CAP"</h3>
+      <p>$20.00</p>
+      <button>Add to Cart (Placeholder)</button>
     </div>
     <div class="merch">
-      <img src="Img/placeholder_merch4.jpg" width="200px" alt="Merch Item 4">
-      <h3>"ARTIST MERCH ITEM"</h3>
-      <p>$XX.XX</p>
-    </div>
-    <div class="merch">
-      <img src="Img/placeholder_merch5.jpg" width="200px" alt="Merch Item 5">
-      <h3>"ANOTHER ITEM"</h3>
-      <p>$XX.XX</p>
-    </div>
-    <div class="merch">
-      <img src="Img/placeholder_merch6.jpg" width="200px" alt="Limited Edition Item">
-      <h3>"LIMITED ITEM"</h3>
-      <p>$XXX.XX</p>
+      <img src="img/placeholder_merch4.jpg" width="200px" alt="Limited Edition Item">
+      <h3>"LIMITED EDITION PRINT"</h3>
+      <p>$75.00</p>
       <p><em>Limited Edition</em></p>
+      <button>Add to Cart (Placeholder)</button>
     </div>
     <div class="merch">
-      <img src="Img/placeholder_merch7.jpg" width="200px" alt="Long Sleeve Item">
-      <h3>"LOGO L/S"</h3>
-      <p>$XX.XX</p>
+      <img src="img/placeholder_merch5.jpg" width="200px" alt="Generic Beanie">
+      <h3>"WINTER BEANIE"</h3>
+      <p>$18.00</p>
+      <button>Add to Cart (Placeholder)</button>
     </div>
     <div class="merch">
-      <img src="Img/placeholder_merch8.jpg" width="200px" alt="Artist Long Sleeve">
-      <h3>"ARTIST L/S"</h3>
-      <p>$XX.XX</p>
+      <img src="img/placeholder_merch6.jpg" width="200px" alt="Generic Mug">
+      <h3>"LABEL LOGO MUG"</h3>
+      <p>$15.00</p>
+      <button>Add to Cart (Placeholder)</button>
+    </div>
+    <div class="merch">
+      <img src="img/placeholder_merch7.jpg" width="200px" alt="Generic Poster">
+      <h3>"TOUR POSTER"</h3>
+      <p>$12.00</p>
+      <button>Add to Cart (Placeholder)</button>
+    </div>
+    <div class="merch">
+      <img src="img/placeholder_merch8.jpg" width="200px" alt="Generic Vinyl">
+      <h3>"ARTIST VINYL LP"</h3>
+      <p>$30.00</p>
+      <button>Add to Cart (Placeholder)</button>
     </div>
   </main>
+
+  <footer>
+    <p style="text-align:center; padding: 2rem; border-top: 1px solid #eee;">&copy; <span id="year"></span> Record Label Name. All Rights Reserved.</p>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
 </body>
 </html>
