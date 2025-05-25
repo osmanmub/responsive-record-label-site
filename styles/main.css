@@ -1,31 +1,32 @@
-/* main.css */
+/* main.css - Modern Redesign */
 
 :root {
   /* Colors */
-  --primary-teal: #2C9C9F;
-  --secondary-charcoal: #333333;
-  --accent-terracotta: #D26A1D;
-  --neutral-light: #F5F5F5;
-  --neutral-dark: #1A1A1A;
+  --primary-color: #667EEA; /* Cool Blue/Purple */
+  --secondary-color: #333333; /* Dark text */
+  --accent-color: #F56565; /* Warm Orange/Terracotta */
+  --background-light: #EDF2F7; /* Light background */
+  --text-on-dark: #F7FAFC; /* Light text on dark backgrounds */
 
   /* Typography */
-  --font-family: 'Poppins', sans-serif;
-  --font-xs: 0.75rem;
-  --font-sm: 0.875rem;
+  --font-family-body: 'Inter', sans-serif;
+  --font-family-heading: 'Roboto', sans-serif;
+  --font-xs: 0.8rem;
+  --font-sm: 0.9rem;
   --font-base: 1rem;
-  --font-md: 1.25rem;
+  --font-md: 1.2rem;
   --font-lg: 1.5rem;
   --font-xl: 2rem;
   --font-2xl: 2.5rem;
 
   /* Spacing */
-  --space-xxs: 4px;
-  --space-xs: 8px;
-  --space-sm: 16px;
-  --space-md: 24px;
-  --space-lg: 32px;
-  --space-xl: 48px;
-  --space-2xl: 64px;
+  --space-xxs: 6px;
+  --space-xs: 10px;
+  --space-sm: 20px;
+  --space-md: 30px;
+  --space-lg: 40px;
+  --space-xl: 50px;
+  --space-2xl: 70px;
 
   /* Breakpoints */
   --bp-mobile: 600px;
@@ -38,20 +39,35 @@
 }
 
 /* Base Reset and Typography */
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,700');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap');
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: var(--font-base); background: var(--neutral-light); color: var(--secondary-charcoal); }
-body { font-family: var(--font-family); line-height: 1.6; }
+html { font-size: var(--font-base); background: var(--background-light); color: var(--secondary-color); }
+body { font-family: var(--font-family-body); line-height: 1.6; }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-family-heading); }
 
 /* Layout & Utilities */
 main { padding: var(--space-lg) var(--space-md); display: block; }
-section { max-width: 1200px; margin: 0 auto var(--space-lg); }
+section { max-width: 1200px; margin: 0 auto var(--space-lg); padding: 0 var(--space-md); }
 
 .text-center { text-align: center; }
 .mt-md { margin-top: var(--space-md); }
 .mb-lg { margin-bottom: var(--space-lg); }
 
 /* Responsive Grid */
-.grid { display: grid; grid-gap: var(--space-md); }
-@media (min-width: var(--bp-mobile)) { .grid-cols-2 { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: var(--bp-tablet)) { .grid-cols-3 { grid-template-columns: repeat(3, 1fr); } }
+.grid {
+    display: grid;
+    grid-gap: var(--space-md);
+    grid-template-columns: 1fr; /* Default to single column */
+}
+
+@media (min-width: var(--bp-mobile)) {
+    .grid-cols-2--bp-mobile {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: var(--bp-tablet)) {
+    .grid-cols-3--bp-tablet {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
