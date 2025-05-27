@@ -3,86 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alafia Collective | Home</title>
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/components.css">
+  <title>Record Label | Home</title> <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-  <!-- Header / Navigation -->
   <header>
     <nav class="nav-container">
       <a href="index.html" class="logo-link">
-        <img src="assets/img/logo.png" alt="Alafia Collective" class="logo-img">
-      </a>
+        Record Label </a>
       <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="index.html" class="active">Home</a></li> <li><a href="about.html">About</a></li>
         <li><a href="artists.html">Artists</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="merch.html">Merch</a></li>
       </ul>
+      <div class="social-icons">
+        <a href="#" aria-label="Placeholder Social Media 1"><i class="fab fa-soundcloud"></i></a> <a href="#" aria-label="Placeholder Social Media 2"><i class="fab fa-spotify"></i></a>   <a href="#" aria-label="Placeholder Social Media 3"><i class="fab fa-apple"></i></a>     <a href="#" aria-label="Placeholder Social Media 4"><i class="fab fa-instagram"></i></a><a href="#" aria-label="Placeholder Social Media 5"><i class="fab fa-youtube"></i></a>  </div>
     </nav>
   </header>
 
-  <!-- Main Content -->
   <main>
 
-    <!-- Hero Carousel -->
-    <section id="hero-carousel" class="mt-md mb-lg">
-      <div class="slide-track">
-        <img src="assets/img/carousel1.jpg" alt="Featured 1" class="slide">
-        <img src="assets/img/carousel2.jpg" alt="Featured 2" class="slide">
-        <img src="assets/img/carousel3.jpg" alt="Featured 3" class="slide">
-        <!-- Repeat for smooth loop -->
-      </div>
+    <section id="hero" class="section text-center mt-md mb-lg">
+        <h1 style="font-size: var(--font-2xl); margin-bottom: var(--space-sm);">Your Music. Amplified.</h1>
+        <p style="font-size: var(--font-md); max-width: 600px; margin: auto; margin-bottom: var(--space-md);">
+            We are a [Placeholder: e.g., forward-thinking] record label dedicated to [Placeholder: e.g., unique sounds and groundbreaking artists].
+        </p>
+        <a href="artists.html" class="btn-primary">Discover Artists</a>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section grid grid-cols-1 mt-md mb-lg">
-      <h2 class="text-center" style="font-size: var(--font-xl);">Welcome to Alafia Collective</h2>
+    <section id="about-intro" class="section grid grid-cols-1 mt-md mb-lg">
+      <h2 class="text-center" style="font-size: var(--font-xl);">Welcome</h2>
       <p class="text-center" style="font-size: var(--font-base); max-width: 800px; margin: auto;">
-        Alafia Collective is dedicated to discovering, nurturing, and promoting exceptional musical talent from around the globe. Our mission is to connect artists with audiences and build lasting careers.
+        [Placeholder: Record Label Name] is dedicated to discovering, nurturing, and promoting exceptional musical talent from around the globe. Our mission is to connect artists with audiences and build lasting careers.
       </p>
     </section>
 
-    <!-- New Releases Grid -->
-    <section id="new-releases" class="grid grid-cols-1 grid-cols-2--bp-mobile grid-cols-3--bp-tablet mt-md mb-lg">
-      <div class="card">
-        <img src="assets/img/release1.jpg" alt="Release 1">
-        <div class="card-body">
-          <h3 class="card-title">Artist X – New Album</h3>
-          <p class="card-text">Latest album from Artist X, blending genres and pushing boundaries.</p>
-          <button class="btn-primary">Listen Now</button>
+    <section id="new-releases" class="mt-md mb-lg">
+      <h2 class="text-center" style="font-size: var(--font-xl); margin-bottom: var(--space-md);">New Releases</h2>
+      <div class="grid grid-cols-1 grid-cols-2--bp-mobile grid-cols-3--bp-tablet">
+        <div class="card">
+          <div style="width:100%; height:200px; background-color:#eee; display:flex; align-items:center; justify-content:center; color:#aaa;">Placeholder Image</div>
+          <div class="card-body">
+            <h3 class="card-title">Artist A – Album Title</h3>
+            <p class="card-text">A short description of the new release by Artist A.</p>
+            <button class="btn-primary">Listen Now</button>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="assets/img/release2.jpg" alt="Release 2">
-        <div class="card-body">
-          <h3 class="card-title">Artist Y – Single Release</h3>
-          <p class="card-text">Discover the new single that’s topping the charts.</p>
-          <button class="btn-primary">Listen Now</button>
+        <div class="card">
+          <div style="width:100%; height:200px; background-color:#eee; display:flex; align-items:center; justify-content:center; color:#aaa;">Placeholder Image</div>
+          <div class="card-body">
+            <h3 class="card-title">Artist B – Single Name</h3>
+            <p class="card-text">Latest single from Artist B, explore the sound.</p>
+            <button class="btn-primary">Stream Here</button>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="assets/img/release3.jpg" alt="Release 3">
-        <div class="card-body">
-          <h3 class="card-title">Artist Z – EP Drop</h3>
-          <p class="card-text">Explore the fresh EP from Artist Z.</p>
-          <button class="btn-primary">Listen Now</button>
+        <div class="card">
+          <div style="width:100%; height:200px; background-color:#eee; display:flex; align-items:center; justify-content:center; color:#aaa;">Placeholder Image</div>
+          <div class="card-body">
+            <h3 class="card-title">Artist C – EP Title</h3>
+            <p class="card-text">Fresh EP drop from the talented Artist C.</p>
+            <button class="btn-primary">Explore EP</button>
+          </div>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; <span id="year"></span> Alafia Collective. All Rights Reserved.</p>
+    <div class="social-icons" style="justify-content: center; margin-bottom: var(--space-sm);">
+        <a href="#" aria-label="Placeholder Footer Social Media 1"><i class="fab fa-soundcloud"></i></a>
+        <a href="#" aria-label="Placeholder Footer Social Media 2"><i class="fab fa-spotify"></i></a>
+        <a href="#" aria-label="Placeholder Footer Social Media 3"><i class="fab fa-apple"></i></a>
+        <a href="#" aria-label="Placeholder Footer Social Media 4"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Placeholder Footer Social Media 5"><i class="fab fa-youtube"></i></a>
+      </div>
+    <p>&copy; <span id="year"></span> [Placeholder: Record Label Name]. All Rights Reserved.</p>
   </footer>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple active link highlighter for nav
+    const currentLocation = window.location.href;
+    const menuItem = document.querySelectorAll('.nav-list li a');
+    const menuLength = menuItem.length;
+    for (let i = 0; i<menuLength; i++){
+      if(menuItem[i].href === currentLocation){
+        menuItem[i].className = "active";
+      }
+    }
   </script>
 
 </body>
