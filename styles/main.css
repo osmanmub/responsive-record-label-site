@@ -1,317 +1,333 @@
-/* main.css - Modern Minimalist Black & White Redesign */
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,700');
 
-:root {
-  /* Colors */
-  --primary-color: #000000; /* Black */
-  --secondary-color: #FFFFFF; /* White */
-  --text-color: #000000; /* Black text on white background */
-  --background-color: #FFFFFF; /* White background */
-  --accent-color: #333333; /* Dark grey for subtle accents if needed */
-  --border-color: #DDDDDD; /* Light grey for borders */
-
-  /* Typography */
-  --font-family-main: 'Inter', sans-serif; /* Modern minimalist font */
-  --font-xs: 0.8rem;
-  --font-sm: 0.9rem;
-  --font-base: 1rem;
-  --font-md: 1.15rem; /* Adjusted for a more minimal feel */
-  --font-lg: 1.4rem;
-  --font-xl: 1.8rem;
-  --font-2xl: 2.2rem;
-
-  /* Spacing */
-  --space-xxs: 6px;
-  --space-xs: 10px;
-  --space-sm: 20px;
-  --space-md: 30px;
-  --space-lg: 40px;
-  --space-xl: 50px;
-  --space-2xl: 70px;
-
-  /* Breakpoints */
-  --bp-mobile: 600px;
-  --bp-tablet: 1024px;
-
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-  --shadow-md: 0 3px 6px rgba(0,0,0,0.07);
-  --shadow-lg: 0 8px 15px rgba(0,0,0,0.07);
-
-  /* Header Height - for main content offset */
-  --header-height: 60px; /* Adjust as needed based on final nav styling */
-}
-
-/* Base Reset and Typography */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+      box-sizing: border-box;
 }
 
 html {
-  font-size: var(--font-base);
-  background: var(--background-color);
-  color: var(--text-color);
-  scroll-behavior: smooth;
+  background-color: #fefefe;
 }
 
 body {
-  font-family: var(--font-family-main);
-  line-height: 1.6;
-  padding-top: var(--header-height); /* Offset for fixed header */
+  font-family: 'Poppins';
+  background-color: #fefefe;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-main); /* Consistent font */
-  font-weight: 500; /* Slightly bolder for headings, but still minimal */
-  line-height: 1.3;
-  margin-bottom: var(--space-sm);
+
+main {
+  opacity: 1;
+  transition: 1s opacity;
+  display: grid;
+  margin-top: 3rem;
+  font-size: 1.1rem;
 }
 
-a {
-  color: var(--text-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
+main.fade-out {
+  opacity: 0;
+  transition: none;
 }
 
-a:hover {
-  color: var(--accent-color); /* Subtle hover effect */
+main#home {
+  grid-template-columns: auto;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+main#home p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+main#talent {
+  grid-template-columns: auto auto;
+  align-items: center;
+  grid-column-gap: 2.5%;
+  grid-row-gap: 10%;
+}
+
+main#talent .talent {
+  text-align: center;
+}
+
+main#talent .talent-bio {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+main#talent img {
+  width: 75%;
+}
+
+main#shows {
+  grid-template-columns: auto auto;
+  grid-gap: 10%;
+  justify-content: center;
+  align-items: center;
+}
+
+.date {
+  text-align: center;
   display: block;
 }
 
-/* Header / Fixed Navigation */
-header {
-  background-color: var(--background-color);
-  border-bottom: 1px solid var(--border-color);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--header-height);
-  z-index: 1000;
-  display: flex;
-  justify-content: center; /* Center nav container */
-  align-items: center;
-  padding: 0 var(--space-md);
+.date h1 {
+  font-size: 5vw;
 }
 
-.nav-container {
+.date h2 {
+  font-size: 4vw;
+}
+
+main#merch {
+  grid-template-columns: auto auto auto auto;
+  text-align: center;
+  justify-content: center;
+  grid-gap: 7%;
+}
+
+nav {
+  padding: 1rem;
+  overflow: hidden;
+  background-color: #fefefe;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 1200px; /* Optional: constrain nav width */
-}
-
-.logo-link {
-  font-size: var(--font-lg);
-  font-weight: 700;
-  color: var(--text-color);
-}
-
-.logo-img { /* Keeping it simple for placeholder */
-  height: calc(var(--header-height) - 30px); /* Adjust based on logo aspect ratio */
-  width: auto;
-  display: none; /* Hide image logo if you prefer text, or style as needed */
-}
-/* If using a text logo instead of image: */
-.logo-link::before {
- content: "Record Label"; /* Placeholder Text Logo */
- display: inline-block;
-}
-
-
-.nav-list {
-  list-style: none;
-  display: flex;
-}
-
-.nav-list li {
-  margin-left: var(--space-sm);
-}
-
-.nav-list li a {
-  font-family: var(--font-family-main);
-  font-size: var(--font-sm);
-  font-weight: 500; /* Slightly bolder for nav links */
-  text-transform: uppercase; /* Common minimalist style */
-  letter-spacing: 0.5px;
-  padding: var(--space-xs) 0;
-  position: relative;
-}
-.nav-list li a::after { /* Subtle underline effect on hover/active */
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    display: block;
-    margin-top: 2px;
-    right: 0;
-    background: var(--text-color);
-    transition: width .2s ease;
-    -webkit-transition: width .2s ease;
-}
-.nav-list li a:hover::after {
-    width: 100%;
-    left: 0;
-    background-color: var(--text-color);
-}
-.nav-list li a.active::after { /* Style for active page link */
-    width: 100%;
-    left: 0;
-    background-color: var(--text-color);
-}
-
-
-/* Social Media Icons Placeholder in Nav or Footer */
-.social-icons {
-  display: flex;
-  align-items: center;
-}
-
-.social-icons a {
-  margin-left: var(--space-xs);
-  font-size: var(--font-md); /* Adjust icon size */
-  color: var(--text-color);
-}
-.social-icons a:hover {
-  color: var(--accent-color);
-}
-
-
-/* Main Content */
-main {
-  padding: var(--space-lg) var(--space-md);
-  display: block;
-}
-
-section {
-  max-width: 1200px;
-  margin: 0 auto var(--space-2xl); /* Increased bottom margin for section separation */
-  padding: 0 var(--space-md);
-}
-
-.text-center { text-align: center; }
-.mt-md { margin-top: var(--space-md); }
-.mb-lg { margin-bottom: var(--space-lg); }
-
-/* Hero Carousel - Simplified for B&W Minimalist */
-#hero-carousel {
-  display: none; /* Hide image carousel for now to maintain B&W focus */
-  /* Or, if you want a placeholder:
-  background-color: var(--border-color);
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: var(--space-lg);
-  */
-}
-/* .slide-track, .slide will be hidden if hero-carousel is display:none */
-
-
-/* About Section */
-#about h2 {
-  font-size: var(--font-xl);
-  font-weight: 700; /* Emphasize main section titles */
-}
-#about p {
-  font-size: var(--font-md);
-  max-width: 700px; /* Slightly narrower for better readability */
-  margin: 0 auto; /* Center if max-width is applied */
-  line-height: 1.7;
-}
-
-/* New Releases Grid & Cards */
-.grid {
-  display: grid;
-  grid-gap: var(--space-md);
-  grid-template-columns: 1fr; /* Default to single column */
-}
-
-@media (min-width: var(--bp-mobile)) {
-  .grid-cols-2--bp-mobile {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: var(--bp-tablet)) {
-  .grid-cols-3--bp-tablet {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.card {
-  background-color: var(--background-color);
-  border: 1px solid var(--border-color);
-  /* box-shadow: var(--shadow-sm); */ /* Optional: remove shadow for flatter design */
-  overflow: hidden; /* If using images */
-  transition: box-shadow 0.3s ease;
-}
-/* .card:hover {
-  box-shadow: var(--shadow-md);
-} */
-
-.card img { /* Placeholder style for images if you keep them */
-  width: 100%;
-  height: 200px; /* Example fixed height */
-  object-fit: cover;
-  background-color: #f0f0f0; /* Placeholder background */
-  border-bottom: 1px solid var(--border-color);
-}
-
-.card-body {
-  padding: var(--space-sm);
-}
-
-.card-title {
-  font-size: var(--font-md);
-  font-weight: 700;
-  margin-bottom: var(--space-xs);
-}
-
-.card-text {
-  font-size: var(--font-sm);
-  margin-bottom: var(--space-sm);
-  color: #555; /* Slightly lighter text for descriptions */
-}
-
-/* Buttons */
-.btn-primary {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  border: 1px solid var(--primary-color);
-  padding: var(--space-xs) var(--space-sm);
-  font-size: var(--font-sm);
-  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logo {
+  position: absolute;
+  left: 3rem;
+
+}
+
+.logo a {
+  color: #000;
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: 0px;
+  text-decoration: none;
+}
+
+nav ul {
+  float: right;
+}
+
+nav ul li {
   display: inline-block;
+  float: left;
+
 }
 
-.btn-primary:hover {
-  background-color: var(--accent-color); /* Dark grey hover */
-  border-color: var(--accent-color);
-  color: var(--secondary-color);
+@keyframes slideIn {
+  from {
+
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: var(--space-md) var(--space-md);
-  border-top: 1px solid var(--border-color);
-  font-size: var(--font-sm);
-  color: #777; /* Lighter text for footer */
+nav ul li:not(:first-child) {
+  margin-left: 48px;
 }
 
-/* Remove components.css if its styles are merged or no longer needed */
-/* You might want to keep it if it has other reusable components styled for B&W */
+nav ul li:last-child {
+  margin-right: 24px;
+}
+
+nav ul li a {
+  display: inline-block;
+  outline: none;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.25rem;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: #d26a1d;
+}
+
+main {
+  padding: 1rem 10%;
+}
+
+@media screen and (max-width: 1000px){
+  main#merch {
+    grid-template-columns: auto auto;
+    grid-row-gap: 4%;
+  }
+}
+
+@media screen and (min-width: 701px){
+  .mobile-nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .logo {
+    padding: 0;
+    position: static;
+  }
+
+  .wide-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #111;
+    opacity: 0;
+    transition: all 0.2s ease;
+  }
+
+  .mobile-nav ul {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+
+  .mobile-nav ul li {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.2rem;
+  }
+
+  .mobile-nav ul li:nth-child(1) a {
+    transition-delay: 0.2s;
+  }
+
+  .mobile-nav ul li:nth-child(2) a {
+    transition-delay: 0.3s;
+  }
+
+  .mobile-nav ul li:nth-child(3) a {
+    transition-delay: 0.4s;
+  }
+
+  .mobile-nav ul li:nth-child(4) a {
+    transition-delay: 0.5s;
+  }
+
+  .mobile-nav ul li:not(:first-child) {
+    margin-left: 0;
+  }
+
+  .mobile-nav ul li a {
+    padding: 10px 24px;
+    opacity: 0;
+    color: #fefefe;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    transform: translateX(-20px);
+    transition: all 0.2s ease;
+  }
+
+  .nav-btn {
+    position: fixed;
+    right: 1rem;
+    top: 10px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 9999;
+    border-radius: 50%;
+  }
+
+  .nav-btn i {
+    display: block;
+    width: 30px;
+    height: 6px;
+    background: #000;
+    border-radius: 2px;
+    margin-left: 14px;
+  }
+
+  .nav-btn i:nth-child(1) {
+    margin-top: 16px;
+  }
+
+  .nav-btn i:nth-child(2) {
+    margin-top: 4px;
+    opacity: 1;
+  }
+
+  .nav-btn i:nth-child(3) {
+    margin-top: 4px;
+  }
+
+  main#artists {
+    grid-template-columns: auto;
+    grid-gap: 2.5%;
+  }
+
+  main#shows {
+    grid-template-columns: auto;
+    grid-gap: 10%;
+    text-align: center;
+  }
+
+  #shows div:not(.date){
+    position: relative;
+    bottom: 5rem;
+  }
+
+  .date h1 {
+    font-size: 3rem;
+  }
+
+  .date h2 {
+    font-size: 2.5rem;
+  }
+
+  main#merch {
+    grid-template-columns: auto;
+    grid-row-gap: 2%;
+  }
+}
+
+#nav:checked + .nav-btn {
+  transform: rotate(45deg);
+}
+
+#nav:checked + .nav-btn i {
+  background: #fefefe;
+  transition: transform 0.2s ease;
+}
+
+#nav:checked + .nav-btn i:nth-child(1) {
+  transform: translateY(12px) rotate(180deg);
+}
+
+#nav:checked + .nav-btn i:nth-child(2) {
+  opacity: 0;
+}
+
+#nav:checked + .nav-btn i:nth-child(3) {
+  transform: translateY(-8px) rotate(90deg);
+}
+
+#nav:checked ~ .mobile-nav {
+  z-index: 9990;
+  opacity: 1;
+}
+
+#nav:checked ~ .mobile-nav ul li a {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hidden {
+  display: none;
+}
