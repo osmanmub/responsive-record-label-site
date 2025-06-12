@@ -1,76 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Record Label Name | Blog</title>
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/main.css">
-  <script src="js/script.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Label ▸ Blog</title>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'] } } } };
+  </script>
+  <script defer src="https://unpkg.com/feather-icons"></script>
 </head>
-<body>
-
-  <header>
-    <nav>
-      <input type="checkbox" id="nav" class="hidden">
-      <label for="nav" class="nav-btn">
-        <i></i><i></i><i></i>
-      </label>
-      <div class="logo">
-        <a href="index.html"><img src="img/logo.png" alt="Record Label Logo" class="logo-img"></a>
-      </div>
-      <div class="wide-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="artists.html">Artists</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="playlists.html">Playlists</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="merch.html">Merch</a></li>
-        </ul>
-      </div>
-      <div class="mobile-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="artists.html">Artists</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="playlists.html">Playlists</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="merch.html">Merch</a></li>
-        </ul>
-      </div>
-    </nav>
+<body class="bg-white text-neutral-900 antialiased">
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-6 lg:px-8">
+      <a href="index.html" class="font-semibold tracking-tight">LABEL&nbsp;LOGO</a>
+      <button id="navToggle" class="sm:hidden" aria-label="toggle menu"><i data-feather="menu"></i></button>
+      <ul id="menu" class="hidden sm:flex gap-8 text-sm font-medium">
+        <li><a href="roster.html" class="hover:underline">Roster</a></li>
+        <li><a href="playlists.html" class="hover:underline">Playlists</a></li>
+        <li><a href="events.html" class="hover:underline">Events</a></li>
+        <li><a href="blog.html" class="hover:underline">Blog</a></li>
+      </ul>
+    </div>
   </header>
 
-  <main id="blog-main">
-    <script>
-      document.querySelector('main').classList.add('fade-out');
-    </script>
-    <h1 class="page-title">Latest News & Updates</h1>
-      <article>
-        <h2>Exciting New Signing Announced!</h2>
-        <p><small>Posted on: Month Day, Year by Admin</small></p>
-        <p>We are thrilled to welcome [New Artist Name] to the Record Label Name family! Read more about their journey and upcoming projects. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <p><a href="#">Read more &raquo;</a></p>
-      </article>
-      <article>
-        <h2>Artist X's New Single Tops Charts</h2>
-        <p><small>Posted on: Month Day, Year by Admin</small></p>
-        <p>Congratulations to Artist X for their incredible achievement! Their latest single "Placeholder Song Title" has reached #1. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-        <p><a href="#">Read more &raquo;</a></p>
-      </article>
-      <article>
-        <h2>Behind the Scenes: The Making of "Placeholder Album"</h2>
-        <p><small>Posted on: Month Day, Year by Admin</small></p>
-        <p>Get an exclusive look into the creative process behind the latest album from Artist Y. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
-        <p><a href="#">Read more &raquo;</a></p>
-      </article>
-      </main>
+  <main class="max-w-4xl mx-auto px-6 lg:px-8 pt-24 pb-32">
+    <h1 class="text-3xl font-semibold mb-12">Blog</h1>
 
-  <footer>
-    <p style="text-align:center; padding: 2rem; border-top: 1px solid #eee;">&copy; <span id="year"></span> Record Label Name. All Rights Reserved.</p>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <div class="space-y-16">
+      <!-- Post preview -->
+      <article class="flex flex-col gap-4">
+        <h2 class="text-2xl font-medium">
+          <a href="#" class="hover:underline">Blog post title goes here</a>
+        </h2>
+        <p class="text-sm text-neutral-600">Published 01 Jan 2025 · 5&nbsp;min read</p>
+        <p class="prose max-w-none text-neutral-800">Excerpt of the first paragraph to entice readers. All text is placeholder.</p>
+        <a href="#" class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
+          Read more <i data-feather="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </article>
+      <!-- Duplicate article for more posts -->
+      <!-- … -->
+    </div>
+  </main>
+
+  <footer class="border-t border-neutral-200 py-10 text-center text-sm text-neutral-500">
+    © 2025 [Label Name]
   </footer>
 
+  <script>
+    feather.replace();
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.getElementById('menu').classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
