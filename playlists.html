@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Record Label Name | Playlists</title>
+      <link rel="stylesheet" href="styles/normalize.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
 
+  <header>
+    <nav>
+      <input type="checkbox" id="nav" class="hidden">
+      <label for="nav" class="nav-btn">
+        <i></i><i></i><i></i>
+      </label>
+      <div class="logo">
+         <a href="index.html"><img src="img/logo.png" alt="Record Label Logo" class="logo-img"></a>
+      </div>
+      <div class="wide-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="artists.html">Artists</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="playlists.html">Playlists</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="merch.html">Merch</a></li>
+        </ul>
+      </div>
+      <div class="mobile-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="artists.html">Artists</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="playlists.html">Playlists</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="merch.html">Merch</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="playlists-main">
+    <script>
+      document.querySelector('main').classList.add('fade-out');
+    </script>
+    <h1 class="page-title">Curated Playlists</h1>
+    <p>Check back soon for our latest playlist selections. We'll highlight new releases and staff favorites here.</p>
+  </main>
+
+  <footer>
+    <p style="text-align:center; padding: 2rem; border-top: 1px solid #eee;">&copy; <span id="year"></span> Record Label Name. All Rights Reserved.</p>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+
+</body>
+</html>
