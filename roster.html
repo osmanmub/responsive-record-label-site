@@ -3,54 +3,59 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Label ▸ Roster</title>
+  <title>alafia ▸ Roster</title>
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-  <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'] } } } };
-  </script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}};</script>
   <script defer src="https://unpkg.com/feather-icons"></script>
 </head>
 <body class="bg-white text-neutral-900 antialiased">
-  <!-- Header -->
+  <!-- Header (same on every page) -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
     <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-6 lg:px-8">
-      <a href="index.html" class="font-semibold tracking-tight">LABEL&nbsp;LOGO</a>
+      <a href="index.html" class="text-base font-semibold lowercase tracking-tight">alafia</a>
       <button id="navToggle" class="sm:hidden" aria-label="toggle menu"><i data-feather="menu"></i></button>
       <ul id="menu" class="hidden sm:flex gap-8 text-sm font-medium">
-        <li><a href="roster.html" class="hover:underline">Roster</a></li>
+        <li><a href="roster.html"    class="hover:underline">Roster</a></li>
         <li><a href="playlists.html" class="hover:underline">Playlists</a></li>
-        <li><a href="events.html" class="hover:underline">Events</a></li>
-        <li><a href="blog.html" class="hover:underline">Blog</a></li>
+        <li><a href="events.html"    class="hover:underline">Events</a></li>
+        <li><a href="blog.html"      class="hover:underline">Blog</a></li>
       </ul>
     </div>
   </header>
 
-  <!-- Main -->
   <main class="max-w-6xl mx-auto px-6 lg:px-8 pt-24 pb-32">
     <h1 class="text-3xl font-semibold mb-12">Roster</h1>
 
     <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Artist card -->
+      <!-- Artist 1 -->
       <div class="flex flex-col gap-4">
-        <div class="aspect-square bg-neutral-100 border border-neutral-200"></div>
-        <span class="font-medium">Artist Name</span>
-        <span class="text-sm text-neutral-600">Genre</span>
+        <img src="img/artist1.png" alt="artist 1" class="aspect-square object-cover border border-neutral-200">
+        <span class="font-medium">Artist One</span>
+        <span class="text-sm text-neutral-600">genre</span>
       </div>
-      <!-- Duplicate card five more times -->
-      <!-- … -->
+      <!-- Artist 2 -->
+      <div class="flex flex-col gap-4">
+        <img src="img/artist2.png" alt="artist 2" class="aspect-square object-cover border border-neutral-200">
+        <span class="font-medium">Artist Two</span>
+        <span class="text-sm text-neutral-600">genre</span>
+      </div>
+      <!-- Artist 3 -->
+      <div class="flex flex-col gap-4">
+        <img src="img/artist3.png" alt="artist 3" class="aspect-square object-cover border border-neutral-200">
+        <span class="font-medium">Artist Three</span>
+        <span class="text-sm text-neutral-600">genre</span>
+      </div>
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="border-t border-neutral-200 py-10 text-center text-sm text-neutral-500">
-    © 2025 [Label Name]
+    © 2025 alafia
   </footer>
 
   <script>
     feather.replace();
-    document.getElementById('navToggle').addEventListener('click', () => {
-      document.getElementById('menu').classList.toggle('hidden');
-    });
+    document.getElementById('navToggle')
+      .addEventListener('click', () => document.getElementById('menu').classList.toggle('hidden'));
   </script>
 </body>
 </html>
