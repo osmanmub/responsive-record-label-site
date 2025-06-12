@@ -1,79 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Record Label | Artists</title>
-      <link rel="stylesheet" href="styles/main.css">
-      <script type="text/javascript" src="js/script.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Label ▸ Home</title>
+
+  <!-- Tailwind 3 via CDN for rapid prototyping -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Feather icons -->
+  <script defer src="https://unpkg.com/feather-icons"></script>
 </head>
-<body>
 
-  <header>
-    <nav>
-      <input type="checkbox" id="nav" class="hidden">
-      <label for="nav" class="nav-btn">
-        <i></i>
-        <i></i>
-        <i></i>
-      </label>
-      <div class="logo">
-        <a href="index.html"><img src="img/logo.png" alt="Label Logo" class="logo-img" style="height: 40px;"></a>
-      </div>
-      <div class="wide-nav">
-        <ul>
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="artists.html">Artists</a></li>
-          <li><a href="shows.html">Shows</a></li>
-          <li><a href="merch.html">Merch</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-      </div>
-      <div class="mobile-nav">
-        <ul>
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="artists.html">Artists</a></li>
-          <li><a href="shows.html">Shows</a></li>
-          <li><a href="merch.html">Merch</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-      </div>
-    </nav>
+<body class="bg-white text-neutral-900 antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-6 lg:px-8">
+      <!-- logo -->
+      <a href="index.html" class="font-semibold tracking-tight">LABEL&nbsp;LOGO</a>
+
+      <!-- nav -->
+      <button id="navToggle" class="sm:hidden" aria-label="toggle menu">
+        <i data-feather="menu"></i>
+      </button>
+
+      <ul id="menu"
+          class="hidden sm:flex gap-8 text-sm font-medium">
+        <li><a href="roster.html"   class="hover:underline">Roster</a></li>
+        <li><a href="playlists.html" class="hover:underline">Playlists</a></li>
+        <li><a href="events.html"   class="hover:underline">Events</a></li>
+        <li><a href="blog.html"     class="hover:underline">Blog</a></li>
+      </ul>
+    </div>
   </header>
+<!-- keep the same <head>, <header>, and <footer>; change only <main> -->
+<main class="max-w-6xl mx-auto px-6 lg:px-8 pt-24 pb-32">
+  <h1 class="text-3xl font-semibold mb-8">Roster</h1>
 
-  <main id="artists">
-    <script>
-      document.querySelector('main').classList.add('fade-out');
-    </script>
-    <div class="artist">
-      <img src="img/brian.png" width="75%" alt="Artist Name 1">
-      <h1>ARTIST NAME 1</h1>
+  <!-- placeholder cards -->
+  <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="flex flex-col gap-4">
+      <div class="aspect-square bg-neutral-100 border border-neutral-200"></div>
+      <span class="font-medium">Artist Name</span>
     </div>
-    <div class="artist-bio">
-      Placeholder bio for Artist Name 1. This artist brings a unique sound to the scene... (Add more details here). Their latest album <strong>Album Title</strong> will be available on all streaming platforms (Date/Year).
-    </div>
-      <div class="artist">
-        <img src="img/matt.png" width="75%" alt="Artist Name 2">
-        <h1>ARTIST NAME 2</h1>
-      </div>
-      <div class="artist-bio">
-        Placeholder bio for Artist Name 2. Known for their energetic performances and lyrical prowess... (Add more details here).
-      </div>
-      <div class="artist">
-        <img src="img/mike.png" width="75%" alt="Artist Name 3">
-        <h1>ARTIST NAME 3</h1>
-      </div>
-      <div class="artist-bio">
-        Placeholder bio for Artist Name 3. A versatile artist and producer, contributing to various projects... (Add more details here).
-      </div>
-      <div class="artist">
-        <img src="img/smurf.png" width="75%" alt="Artist Name 4">
-        <h1>ARTIST NAME 4</h1>
-      </div>
-      <div class="artist-bio">
-        Placeholder bio for Artist Name 4. Co-founder and one of the pioneering artists of the label... (Add more details here).
-      </div>
-   </main>
+    <!-- duplicate as needed -->
+  </div>
+</main>
+
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-200 py-10 text-center text-sm text-neutral-500">
+    © 2025 [Label Name]
+  </footer>
+
+  <script>
+    feather.replace();
+
+    const btn   = document.getElementById('navToggle');
+    const menu  = document.getElementById('menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
