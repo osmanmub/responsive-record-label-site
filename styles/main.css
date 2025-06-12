@@ -18,7 +18,7 @@ main {
   opacity: 1;
   transition: 1s opacity;
   display: grid;
-  margin-top: 3rem;
+  margin-top: 5rem; /* space for fixed header */
   font-size: 1.1rem;
 }
 
@@ -29,6 +29,7 @@ main.fade-out {
 
 main#home {
   grid-template-columns: auto;
+  min-height: 150vh; /* make home page longer */
 }
 
 main#home p {
@@ -83,20 +84,29 @@ main#merch {
   grid-gap: 7%;
 }
 
+header {
+  position: fixed; /* keep header at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 nav {
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 6rem; /* extra left padding for fixed logo */
   overflow: hidden;
   background-color: #fefefe;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; /* push navigation items to the right */
   align-items: center;
   text-transform: uppercase;
 }
 
 .logo {
-  position: absolute;
-  left: 3rem;
-
+  position: fixed; /* keep logo fixed in the top left */
+  top: 0.5rem;
+  left: 1rem;
+  z-index: 1001;
 }
 
 .logo a {
@@ -168,7 +178,10 @@ main {
 @media screen and (max-width: 700px) {
   .logo {
     padding: 0;
-    position: static;
+    position: fixed;
+    top: 0.5rem;
+    left: 1rem;
+    z-index: 1001;
   }
 
   .wide-nav {
