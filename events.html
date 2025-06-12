@@ -1,26 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Record Label Name | Events</title>
-      <link rel="stylesheet" href="styles/normalize.css">
-      <link rel="stylesheet" href="styles/main.css">
-      <script type="text/javascript" src="js/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | Record Label</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/site.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
-
-  <header>
-    <nav>
-      <input type="checkbox" id="nav" class="hidden">
-      <label for="nav" class="nav-btn">
-        <i></i><i></i><i></i>
-      </label>
-      <div class="logo">
-         <a href="index.html"><img src="img/logo.png" alt="Record Label Logo" class="logo-img"></a>
-      </div>
-      <div class="wide-nav">
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html"><img src="img/logo.png" alt="Record Label Logo"></a>
+      <nav class="main-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="artists.html">Artists</a></li>
@@ -29,60 +21,28 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="merch.html">Merch</a></li>
         </ul>
-      </div>
-      <div class="mobile-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="artists.html">Artists</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="playlists.html">Playlists</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="merch.html">Merch</a></li>
-        </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
-  <main id="events-main">
-    <script>
-      document.querySelector('main').classList.add('fade-out');
-    </script>
-    <h1 class="page-title">Upcoming Events</h1>
-
-    <div class="event-item">
-      <div class="date">
-        <h1>MONTH DAY</h1>
-        <h2>YEAR</h2>
-      </div>
-      <div>
-        <h3>Event Name / Artist Lineup</h3>
-        <h4>Performing: Artist Name 1, Artist Name 2</h4>
-        <p><strong>Venue:</strong> Placeholder Venue Name, City, ST</p>
-        <p><strong>Time:</strong> HH:MM AM/PM</p>
-        <p>Join us for an unforgettable night of music! (Additional details about the event).</p>
-        <a href="#" class="button">Tickets / More Info (Placeholder)</a>
+  <main id="events" class="fade-out">
+    <div class="container">
+      <h1 class="page-title">Upcoming Events</h1>
+      <div class="event-list">
+        <div class="event">
+          <p class="event-date">Month Day, Year</p>
+          <p><strong>Event Name 1</strong> - Venue, City</p>
+        </div>
+        <div class="event">
+          <p class="event-date">Month Day, Year</p>
+          <p><strong>Event Name 2</strong> - Venue, City</p>
+        </div>
       </div>
     </div>
+  </main>
 
-    <div class="event-item">
-      <div class="date">
-        <h1>MONTH DAY</h1>
-        <h2>YEAR</h2>
-      </div>
-      <div>
-        <h3>Another Event / Featured Artist</h3>
-        <h4>Performing: Artist Name 3</h4>
-        <p><strong>Venue:</strong> Another Venue, City, ST</p>
-        <p><strong>Time:</strong> HH:MM AM/PM</p>
-        <p>Don't miss this exclusive performance! (Additional details).</p>
-        <a href="#" class="button">Tickets / More Info (Placeholder)</a>
-      </div>
-    </div>
-    </main>
-
-  <footer>
-    <p style="text-align:center; padding: 2rem; border-top: 1px solid #eee;">&copy; <span id="year"></span> Record Label Name. All Rights Reserved.</p>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Record Label. All Rights Reserved.</p>
   </footer>
 </body>
 </html>

@@ -1,0 +1,104 @@
+:root {
+  --primary: #bb86fc;
+  --bg-dark: #121212;
+  --text-light: #fafafa;
+  --text-muted: #c5c5c5;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  margin: 0;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.site-header {
+  background: #1c1c1c;
+  border-bottom: 1px solid #333;
+  padding: 1rem 0;
+}
+.logo img {
+  height: 40px;
+}
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.main-nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 0.5rem;
+}
+.main-nav a:hover {
+  color: var(--primary);
+}
+.hero {
+  text-align: center;
+  padding: 3rem 0;
+}
+.about,
+.content-section {
+  padding: 2rem 0;
+}
+.page-title {
+  text-align: center;
+  margin: 2rem 0;
+}
+.artist-grid,
+.merch-grid,
+.playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+.artist-card img,
+.merch-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+.artist-card h3 {
+  margin: 1rem 0 0.5rem;
+}
+.event-list .event {
+  border-bottom: 1px solid #333;
+  padding: 1rem 0;
+}
+.event-list .event:last-child {
+  border: none;
+}
+.merch-item {
+  text-align: center;
+}
+.merch-item button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: var(--bg-dark);
+  border: none;
+  cursor: pointer;
+}
+.merch-item button:hover {
+  background: #9a67d3;
+}
+.blog-post {
+  margin-bottom: 2rem;
+}
+.site-footer {
+  background: #1c1c1c;
+  border-top: 1px solid #333;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+.site-footer p {
+  margin: 0;
+  color: var(--text-muted);
+}

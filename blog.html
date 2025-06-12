@@ -3,23 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Record Label Name | Blog</title>
+  <title>Blog | Record Label</title>
   <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/site.css">
   <script src="js/script.js" defer></script>
 </head>
 <body>
-
-  <header>
-    <nav>
-      <input type="checkbox" id="nav" class="hidden">
-      <label for="nav" class="nav-btn">
-        <i></i><i></i><i></i>
-      </label>
-      <div class="logo">
-        <a href="index.html"><img src="img/logo.png" alt="Record Label Logo" class="logo-img"></a>
-      </div>
-      <div class="wide-nav">
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html"><img src="img/logo.png" alt="Record Label Logo"></a>
+      <nav class="main-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="artists.html">Artists</a></li>
@@ -28,49 +21,26 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="merch.html">Merch</a></li>
         </ul>
-      </div>
-      <div class="mobile-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="artists.html">Artists</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="playlists.html">Playlists</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="merch.html">Merch</a></li>
-        </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
-  <main id="blog-main">
-    <script>
-      document.querySelector('main').classList.add('fade-out');
-    </script>
-    <h1 class="page-title">Latest News & Updates</h1>
-      <article>
-        <h2>Exciting New Signing Announced!</h2>
-        <p><small>Posted on: Month Day, Year by Admin</small></p>
-        <p>We are thrilled to welcome [New Artist Name] to the Record Label Name family! Read more about their journey and upcoming projects. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <p><a href="#">Read more &raquo;</a></p>
-      </article>
-      <article>
-        <h2>Artist X's New Single Tops Charts</h2>
-        <p><small>Posted on: Month Day, Year by Admin</small></p>
-        <p>Congratulations to Artist X for their incredible achievement! Their latest single "Placeholder Song Title" has reached #1. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-        <p><a href="#">Read more &raquo;</a></p>
-      </article>
-      <article>
-        <h2>Behind the Scenes: The Making of "Placeholder Album"</h2>
-        <p><small>Posted on: Month Day, Year by Admin</small></p>
-        <p>Get an exclusive look into the creative process behind the latest album from Artist Y. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
-        <p><a href="#">Read more &raquo;</a></p>
-      </article>
-      </main>
+  <main id="blog" class="fade-out">
+    <div class="container">
+      <h1 class="page-title">Latest News</h1>
+      <div class="blog-post">
+        <h2>New Artist Signing</h2>
+        <p>We are excited to welcome a new artist to the family. Stay tuned for upcoming releases.</p>
+      </div>
+      <div class="blog-post">
+        <h2>Upcoming Tour Dates</h2>
+        <p>Our artists will be touring soon. Check the events page for details.</p>
+      </div>
+    </div>
+  </main>
 
-  <footer>
-    <p style="text-align:center; padding: 2rem; border-top: 1px solid #eee;">&copy; <span id="year"></span> Record Label Name. All Rights Reserved.</p>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Record Label. All Rights Reserved.</p>
   </footer>
-
 </body>
 </html>

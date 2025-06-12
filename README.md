@@ -1,5 +1,13 @@
-# Responsive Website
-A simple responsive website for an imaginary record label.
+# Record Label Website
 
-## About
-[This website](https://taylorbotts.github.io/responsive-record-label-site/) was a project on responsive design. Using CSS grid and media queries the website's four pages will display differently when viewed on desktop versus mobile without losing any information.
+A simple multi-page site for an imaginary record label. The design uses a minimal dark theme and is fully responsive.
+
+## Pages
+- **Home** – introduction to the label
+- **Artists** – roster of artists
+- **Events** – upcoming shows and events
+- **Playlists** – curated playlists
+- **Blog** – news updates
+- **Merch** – basic store layout
+
+All pages share a consistent header, footer, and layout. Images and text are placeholders that can be replaced with real content.

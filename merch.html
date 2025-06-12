@@ -1,26 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Record Label Name | Merch</title>
-      <link rel="stylesheet" href="styles/normalize.css">
-      <link rel="stylesheet" href="styles/main.css">
-      <script type="text/javascript" src="js/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merch | Record Label</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/site.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
-
-  <header>
-    <nav>
-      <input type="checkbox" id="nav" class="hidden">
-      <label for="nav" class="nav-btn">
-        <i></i><i></i><i></i>
-      </label>
-      <div class="logo">
-        <a href="index.html"><img src="img/logo.png" alt="Record Label Logo" class="logo-img"></a>
-      </div>
-      <div class="wide-nav">
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html"><img src="img/logo.png" alt="Record Label Logo"></a>
+      <nav class="main-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="artists.html">Artists</a></li>
@@ -29,80 +21,35 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="merch.html">Merch</a></li>
         </ul>
-      </div>
-      <div class="mobile-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="artists.html">Artists</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="playlists.html">Playlists</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="merch.html">Merch</a></li>
-        </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
-  <main id="merch-main">
-    <script>
-      document.querySelector('main').classList.add('fade-out');
-    </script>
-    <h1 class="page-title">Official Merchandise</h1>
-
-    <div class="merch">
-      <img src="img/scoota-t.png" width="200px" alt="Generic T-Shirt">
-      <h3>"LABEL LOGO TEE"</h3>
-      <p>$25.00</p>
-      <button>Add to Cart (Placeholder)</button>
-    </div>
-    <div class="merch">
-      <img src="img/mark-t.png" width="200px" alt="Generic Hoodie">
-      <h3>"ARTIST ALBUM HOODIE"</h3>
-      <p>$45.00</p>
-      <button>Add to Cart (Placeholder)</button>
-    </div>
-    <div class="merch">
-      <img src="img/shrug-t.png" width="200px" alt="Generic Cap">
-      <h3>"SIGNATURE CAP"</h3>
-      <p>$20.00</p>
-      <button>Add to Cart (Placeholder)</button>
-    </div>
-    <div class="merch">
-      <img src="img/smurf-t.png" width="200px" alt="Limited Edition Item">
-      <h3>"LIMITED EDITION PRINT"</h3>
-      <p>$75.00</p>
-      <p><em>Limited Edition</em></p>
-      <button>Add to Cart (Placeholder)</button>
-    </div>
-    <div class="merch">
-      <img src="img/idk-ss.png" width="200px" alt="Generic Beanie">
-      <h3>"WINTER BEANIE"</h3>
-      <p>$18.00</p>
-      <button>Add to Cart (Placeholder)</button>
-    </div>
-    <div class="merch">
-      <img src="img/idk-long.png" width="200px" alt="Generic Mug">
-      <h3>"LABEL LOGO MUG"</h3>
-      <p>$15.00</p>
-      <button>Add to Cart (Placeholder)</button>
-    </div>
-    <div class="merch">
-      <img src="img/hurricane-t.png" width="200px" alt="Generic Poster">
-      <h3>"TOUR POSTER"</h3>
-      <p>$12.00</p>
-      <button>Add to Cart (Placeholder)</button>
-    </div>
-    <div class="merch">
-      <img src="img/hurricane-ls.png" width="200px" alt="Generic Vinyl">
-      <h3>"ARTIST VINYL LP"</h3>
-      <p>$30.00</p>
-      <button>Add to Cart (Placeholder)</button>
+  <main id="merch" class="fade-out">
+    <div class="container">
+      <h1 class="page-title">Official Merchandise</h1>
+      <div class="merch-grid">
+        <div class="merch-item">
+          <img src="img/scoota-t.png" alt="Tee">
+          <p>Logo Tee - $25</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="merch-item">
+          <img src="img/mark-t.png" alt="Hoodie">
+          <p>Album Hoodie - $45</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="merch-item">
+          <img src="img/shrug-t.png" alt="Cap">
+          <p>Signature Cap - $20</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
     </div>
   </main>
 
-  <footer>
-    <p style="text-align:center; padding: 2rem; border-top: 1px solid #eee;">&copy; <span id="year"></span> Record Label Name. All Rights Reserved.</p>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Record Label. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
