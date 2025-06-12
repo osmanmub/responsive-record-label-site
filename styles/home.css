@@ -45,17 +45,19 @@ header {
     background-color: #1c1c1c; /* Slightly lighter dark for header */
     padding: 0.5em 0; /* Adjust padding */
     border-bottom: 1px solid #333;
-    position: sticky; /* Makes header stick to top */
+    position: fixed; /* keep header fixed to the top */
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000; /* Ensure it's above other content */
 }
 
 nav {
     max-width: 1200px; /* Limit nav width */
     margin: 0 auto; /* Center nav */
-    padding: 0 20px; /* Padding inside nav */
+    padding: 0 20px 0 6rem; /* space for fixed logo */
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* push items to the right */
     align-items: center;
 }
 
