@@ -3,23 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Label ▸ Home</title>
+  <title>alafia ▸ Home</title>
 
-  <!-- Tailwind 3 via CDN for rapid prototyping -->
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'] }
+        }
+      }
     };
   </script>
-
-  <!-- Feather icons -->
   <script defer src="https://unpkg.com/feather-icons"></script>
 </head>
 
@@ -27,20 +22,13 @@
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
     <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-6 lg:px-8">
-      <!-- logo -->
-      <a href="index.html" class="font-semibold tracking-tight">LABEL&nbsp;LOGO</a>
-
-      <!-- nav -->
-      <button id="navToggle" class="sm:hidden" aria-label="toggle menu">
-        <i data-feather="menu"></i>
-      </button>
-
-      <ul id="menu"
-          class="hidden sm:flex gap-8 text-sm font-medium">
-        <li><a href="roster.html"   class="hover:underline">Roster</a></li>
+      <a href="index.html" class="text-base font-semibold tracking-tight lowercase">alafia</a>
+      <button id="navToggle" class="sm:hidden" aria-label="toggle menu"><i data-feather="menu"></i></button>
+      <ul id="menu" class="hidden sm:flex gap-8 text-sm font-medium">
+        <li><a href="roster.html"    class="hover:underline">Roster</a></li>
         <li><a href="playlists.html" class="hover:underline">Playlists</a></li>
-        <li><a href="events.html"   class="hover:underline">Events</a></li>
-        <li><a href="blog.html"     class="hover:underline">Blog</a></li>
+        <li><a href="events.html"    class="hover:underline">Events</a></li>
+        <li><a href="blog.html"      class="hover:underline">Blog</a></li>
       </ul>
     </div>
   </header>
@@ -49,57 +37,38 @@
   <section class="relative isolate overflow-hidden">
     <div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-50 via-transparent to-pink-50"></div>
 
-    <div class="max-w-5xl mx-auto px-6 lg:px-8 pt-24 pb-32 text-center">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8 pt-32 pb-40 text-center">
       <h1 class="text-4xl sm:text-6xl font-semibold tracking-tight">
-        Independent&nbsp;music<br class="hidden sm:block">for the&nbsp;world
+        independent music<br class="hidden sm:block">for the world
       </h1>
       <p class="mt-6 text-lg leading-8 text-neutral-600">
-        Placeholder label tagline. Everything here is editable in Canvas.
+        placeholder tagline – edit in canvas
       </p>
-
-      <div class="mt-10 flex flex-wrap justify-center gap-6">
-        <a href="roster.html"
-           class="inline-flex items-center gap-2 rounded-md bg-neutral-900 px-5 py-3 text-white hover:bg-neutral-700 transition">
-          Explore roster <i data-feather="arrow-right"></i>
-        </a>
-        <a href="playlists.html"
-           class="inline-flex items-center gap-2 rounded-md ring-1 ring-inset ring-neutral-200 px-5 py-3 hover:bg-neutral-50 transition">
-          Playlists
-        </a>
-      </div>
     </div>
   </section>
 
-  <!-- Highlights -->
-  <section class="max-w-7xl mx-auto px-6 lg:px-8 py-24 grid gap-16 lg:grid-cols-2">
+  <!-- Gallery -->
+  <section class="max-w-7xl mx-auto px-6 lg:px-8 -mt-24 pb-32 grid gap-16 lg:grid-cols-2">
     <article>
       <h2 class="text-xl font-semibold mb-4">Latest release</h2>
-      <div class="aspect-square bg-neutral-100 border border-neutral-200 flex items-center justify-center">
-        <span class="text-neutral-500">Artwork placeholder</span>
-      </div>
+      <img src="img/latest.png" alt="latest release" class="w-full aspect-square object-cover border border-neutral-200">
     </article>
 
     <article>
       <h2 class="text-xl font-semibold mb-4">Upcoming event</h2>
-      <div class="aspect-square bg-neutral-100 border border-neutral-200 flex items-center justify-center">
-        <span class="text-neutral-500">Event poster placeholder</span>
-      </div>
+      <img src="img/upcoming.png" alt="upcoming event" class="w-full aspect-square object-cover border border-neutral-200">
     </article>
   </section>
 
   <!-- Footer -->
   <footer class="border-t border-neutral-200 py-10 text-center text-sm text-neutral-500">
-    © 2025 [Label Name]
+    © 2025 alafia
   </footer>
 
   <script>
     feather.replace();
-
-    const btn   = document.getElementById('navToggle');
-    const menu  = document.getElementById('menu');
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
+    document.getElementById('navToggle')
+      .addEventListener('click', () => document.getElementById('menu').classList.toggle('hidden'));
   </script>
 </body>
 </html>
