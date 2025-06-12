@@ -3,23 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Label ▸ Blog</title>
+  <title>alafia ▸ Blog</title>
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-  <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'] } } } };
-  </script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}};</script>
   <script defer src="https://unpkg.com/feather-icons"></script>
 </head>
 <body class="bg-white text-neutral-900 antialiased">
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
     <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-6 lg:px-8">
-      <a href="index.html" class="font-semibold tracking-tight">LABEL&nbsp;LOGO</a>
+      <a href="index.html" class="text-base font-semibold lowercase tracking-tight">alafia</a>
       <button id="navToggle" class="sm:hidden" aria-label="toggle menu"><i data-feather="menu"></i></button>
       <ul id="menu" class="hidden sm:flex gap-8 text-sm font-medium">
-        <li><a href="roster.html" class="hover:underline">Roster</a></li>
+        <li><a href="roster.html"    class="hover:underline">Roster</a></li>
         <li><a href="playlists.html" class="hover:underline">Playlists</a></li>
-        <li><a href="events.html" class="hover:underline">Events</a></li>
-        <li><a href="blog.html" class="hover:underline">Blog</a></li>
+        <li><a href="events.html"    class="hover:underline">Events</a></li>
+        <li><a href="blog.html"      class="hover:underline">Blog</a></li>
       </ul>
     </div>
   </header>
@@ -28,31 +26,46 @@
     <h1 class="text-3xl font-semibold mb-12">Blog</h1>
 
     <div class="space-y-16">
-      <!-- Post preview -->
+      <!-- Post 1 -->
       <article class="flex flex-col gap-4">
-        <h2 class="text-2xl font-medium">
-          <a href="#" class="hover:underline">Blog post title goes here</a>
-        </h2>
-        <p class="text-sm text-neutral-600">Published 01 Jan 2025 · 5&nbsp;min read</p>
-        <p class="prose max-w-none text-neutral-800">Excerpt of the first paragraph to entice readers. All text is placeholder.</p>
-        <a href="#" class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
-          Read more <i data-feather="arrow-right" class="w-4 h-4"></i>
+        <h2 class="text-2xl font-medium"><a href="blog-post1.html" class="hover:underline">Post One title</a></h2>
+        <p class="text-sm text-neutral-600">Published 01 Jan 2025 · 4 min read</p>
+        <p class="prose max-w-none text-neutral-800">First paragraph excerpt for teaser.</p>
+        <a href="blog-post1.html" class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
+          See more <i data-feather="arrow-right" class="w-4 h-4"></i>
         </a>
       </article>
-      <!-- Duplicate article for more posts -->
-      <!-- … -->
+
+      <!-- Post 2 -->
+      <article class="flex flex-col gap-4">
+        <h2 class="text-2xl font-medium"><a href="blog-post2.html" class="hover:underline">Post Two title</a></h2>
+        <p class="text-sm text-neutral-600">Published 14 Feb 2025 · 3 min read</p>
+        <p class="prose max-w-none text-neutral-800">Excerpt paragraph.</p>
+        <a href="blog-post2.html" class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
+          See more <i data-feather="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="flex flex-col gap-4">
+        <h2 class="text-2xl font-medium"><a href="blog-post3.html" class="hover:underline">Post Three title</a></h2>
+        <p class="text-sm text-neutral-600">Published 30 Mar 2025 · 5 min read</p>
+        <p class="prose max-w-none text-neutral-800">Excerpt paragraph.</p>
+        <a href="blog-post3.html" class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
+          See more <i data-feather="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </article>
     </div>
   </main>
 
   <footer class="border-t border-neutral-200 py-10 text-center text-sm text-neutral-500">
-    © 2025 [Label Name]
+    © 2025 alafia
   </footer>
 
   <script>
     feather.replace();
-    document.getElementById('navToggle').addEventListener('click', () => {
-      document.getElementById('menu').classList.toggle('hidden');
-    });
+    document.getElementById('navToggle')
+      .addEventListener('click', () => document.getElementById('menu').classList.toggle('hidden'));
   </script>
 </body>
 </html>
