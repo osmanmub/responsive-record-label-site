@@ -1,275 +1,88 @@
-/* ==========================================================================
-   Alafia Custom Styles - Dark Theme & Layout
-   ========================================================================== */
-
-/* --- Basic Dark Theme Setup --- */
+/* Basic reset & typography */
 body {
-    background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light grey text for readability */
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Modern font stack */
-    line-height: 1.6;
     margin: 0;
-    padding: 0;
-    font-size: 16px; /* Base font size */
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: #ffffff; /* White headings */
-    font-weight: 600;
-    margin-top: 0; /* Remove default top margin from headings */
-    margin-bottom: 0.75em;
-}
-
-h1 { font-size: 2.5em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.75em; }
-
-p {
-    color: #c5c5c5;
-    margin-bottom: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+    color: #eee;
 }
 
 a {
-    color: #bb86fc; /* Primary accent color (Material Design dark theme purple) */
+    color: #fff;
     text-decoration: none;
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
-a:hover, a:focus {
-    color: #9a67d3; /* Darker shade for hover/focus */
-    text-decoration: underline;
-}
-
-/* --- Header & Navigation Styling (Based on your provided HTML structure) --- */
-header {
-    background-color: #1c1c1c; /* Slightly lighter dark for header */
-    padding: 0.5em 0; /* Adjust padding */
-    border-bottom: 1px solid #333;
-    position: fixed; /* keep header fixed to the top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure it's above other content */
-}
-
-nav {
-    max-width: 1200px; /* Limit nav width */
-    margin: 0 auto; /* Center nav */
-    padding: 0 20px 0 6rem; /* space for fixed logo */
+.container {
     display: flex;
-    justify-content: flex-end; /* push items to the right */
+    justify-content: space-between;
     align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.logo a {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #ffffff;
-    text-decoration: none;
-}
-.logo a:hover, .logo a:focus {
-    color: #bb86fc;
-    text-decoration: none;
+/* Header */
+.site-header {
+    background: #000;
+    padding: 10px 0;
 }
 
-.wide-nav ul {
-    list-style: none;
-    padding: 0;
+.logo {
     margin: 0;
+    font-size: 1.5rem;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
+    gap: 20px;
 }
 
-.wide-nav ul li {
-    margin-left: 20px;
+.main-nav a {
+    color: #fff;
 }
 
-.wide-nav ul li a {
-    color: #e0e0e0;
-    font-weight: 500;
-    padding: 0.5em 0.8em;
+/* Hero section */
+.hero {
+    background: url('../img/hurricane-t.png') center/cover no-repeat;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Sections */
+.artists-section, .events-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.artist-list, .event-list {
+    display: grid;
+    gap: 20px;
+}
+
+.artist-item img {
+    width: 100%;
     border-radius: 4px;
 }
 
-.wide-nav ul li a:hover,
-.wide-nav ul li a.active { /* Assuming you might add an 'active' class for current page */
-    color: #121212;
-    background-color: #bb86fc;
-    text-decoration: none;
-}
-
-/* Hamburger Menu (basic styling, your JS will handle the open/close) */
-.hidden { display: none; }
-.nav-open { /* Basic style, you'll need to style the <i> bars */
-    display: none; /* Hidden on wider screens */
-    cursor: pointer;
-}
-.nav-open i {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px 0;
-    border-radius: 1px;
-}
-
-
-/* --- Footer Basic Dark Styling --- */
-footer {
-    background-color: #1c1c1c;
-    color: #a0a0a0;
-    padding: 2em 20px;
+.artist-item h4 {
+    margin: 10px 0 0;
     text-align: center;
-    border-top: 1px solid #333;
-    margin-top: 40px; /* Space above footer */
 }
 
-footer p {
-    color: #a0a0a0;
-    margin: 0.5em 0;
-}
-
-footer a {
-    color: #bb86fc;
-}
-
-footer a:hover, footer a:focus {
-    color: #9a67d3;
-}
-
-
-/* --- Homepage Two-Column Layout --- */
-.homepage-wrapper {
-    display: flex;
-    flex-wrap: wrap; /* Allows sidebar to stack on smaller screens */
-    padding: 20px;
-    gap: 30px; /* Space between main content and sidebar */
-    max-width: 1200px;
-    margin: 20px auto; /* Add some top/bottom margin for the wrapper too */
-}
-
-.main-content {
-    flex: 3; /* Main content takes up more space */
-    min-width: 0; /* Prevents flex items from overflowing if content is too wide */
-}
-
-.artist-sidebar {
-    flex: 1; /* Sidebar takes up less space */
-    background-color: #1a1a1a;
-    padding: 25px;
-    border-radius: 8px;
-    min-width: 260px; /* Minimum width before it wraps or squishes too much */
-    height: fit-content;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* Subtle shadow */
-}
-
-.artist-sidebar h3 {
-    margin-top: 0;
-    border-bottom: 1px solid #444;
-    padding-bottom: 0.6em;
-    margin-bottom: 1.2em;
-    font-size: 1.5em;
-    color: #e0e0e0;
-}
-
-.artist-sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.artist-sidebar li a {
-    display: flex;
-    align-items: center;
-    color: #d0d0d0;
-    margin-bottom: 15px;
-    padding: 12px;
-    border-radius: 6px;
-    font-weight: 500;
-}
-
-.artist-sidebar li a:hover, .artist-sidebar li a:focus {
-    background-color: #2a2a2a; /* Darker hover for sidebar items */
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.artist-sidebar img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 15px;
-    object-fit: cover;
-    border: 2px solid #555;
-}
-
-.artist-sidebar .view-all-artists-link {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    padding: 12px;
-    background-color: #bb86fc;
-    color: #121212;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-
-.artist-sidebar .view-all-artists-link:hover,
-.artist-sidebar .view-all-artists-link:focus {
-    background-color: #9a67d3;
-    color: #000000;
-    text-decoration: none;
-}
-
-/* --- General Content Sections on Homepage --- */
-.content-section {
-    background-color: #1e1e1e;
-    padding: 25px 30px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-.content-section:last-child {
-    margin-bottom: 0; /* No margin for the last section in main-content */
-}
-
-.content-section h1, .content-section h2, .content-section h3 {
-    margin-top: 0;
-    border-bottom: 1px solid #444;
-    padding-bottom: 0.5em;
-    margin-bottom: 0.8em;
-}
-.content-section .home-bio {
-    font-size: 1.1em;
-    line-height: 1.7;
-}
-
-
-/* --- Responsive Adjustments for Hamburger and Layout --- */
-@media (max-width: 768px) {
-    .wide-nav {
-        display: none; /* Hide wide nav on small screens */
-        /* Your JS and CSS would handle showing it as a dropdown/overlay */
-    }
-    .nav-open {
-        display: block; /* Show hamburger icon */
-    }
-
-    .homepage-wrapper {
-        flex-direction: column;
-        gap: 20px; /* Adjust gap for stacked layout */
-        margin-top: 10px;
-        padding: 15px;
-    }
-
-    .main-content {
-        margin-bottom: 0; /* Gap handles spacing */
-    }
-    .content-section {
-        padding: 20px;
-    }
-    .artist-sidebar {
-        width: 100%; /* Full width when stacked */
-        margin-top: 0; /* Gap handles spacing */
-    }
+.event-item {
+    background: #222;
+    padding: 15px;
+    border-radius: 4px;
 }
