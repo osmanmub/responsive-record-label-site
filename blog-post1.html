@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>alafia ▸ Blog Post</title>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}};</script>
+  <script defer src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-white text-neutral-900 antialiased">
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-6 lg:px-8">
+      <a href="index.html" class="text-base font-semibold lowercase tracking-tight">alafia</a>
+      <button id="navToggle" class="sm:hidden" aria-label="toggle menu"><i data-feather="menu"></i></button>
+      <ul id="menu" class="hidden sm:flex gap-8 text-sm font-medium">
+        <li><a href="roster.html"    class="hover:underline">Roster</a></li>
+        <li><a href="playlists.html" class="hover:underline">Playlists</a></li>
+        <li><a href="events.html"    class="hover:underline">Events</a></li>
+        <li><a href="blog.html"      class="hover:underline">Blog</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="prose lg:prose-lg mx-auto px-6 lg:px-8 pt-24 pb-32">
+    <h1>Blog post title</h1>
+    <p class="text-sm text-neutral-600">01 Jan 2025 · 4 min read</p>
+
+    <p>Lorem ipsum… full article content here.</p>
+    <p>…</p>
+  </main>
+
+  <footer class="border-t border-neutral-200 py-10 text-center text-sm text-neutral-500">
+    © 2025 alafia
+  </footer>
+
+  <script>
+    feather.replace();
+    document.getElementById('navToggle')
+      .addEventListener('click', () => document.getElementById('menu').classList.toggle('hidden'));
+  </script>
+</body>
+</html>
