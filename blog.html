@@ -1,26 +1,21 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>alafia ▸ Home</title>
+  <title>alafia ▸ Blog</title>
 
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter','system-ui','sans-serif'] }
-        }
-      }
-    };
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'] } } } };
   </script>
   <script defer src="https://unpkg.com/feather-icons"></script>
 </head>
+
 <body class="bg-white text-neutral-900 antialiased">
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
-    <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-6 lg:px-8">
-      <a href="index.html" class="text-base font-semibold lowercase tracking-tight">alafia</a>
+  <header class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur border-b border-neutral-200">
+    <div class="flex items-center h-16 px-6 lg:px-8">
+      <a href="index.html" class="mr-auto text-base font-semibold tracking-tight lowercase">alafia</a>
       <button id="navToggle" class="sm:hidden" aria-label="toggle menu"><i data-feather="menu"></i></button>
       <ul id="menu" class="hidden sm:flex gap-8 text-sm font-medium">
         <li><a href="roster.html"    class="hover:underline">Roster</a></li>
@@ -32,34 +27,34 @@
   </header>
 
   <main class="max-w-4xl mx-auto px-6 lg:px-8 pt-24 pb-32">
-    <h1 class="text-3xl font-semibold mb-12">Blog</h1>
+    <h1 class="text-3xl font-semibold mb-4">Insights Blog</h1>
+    <p class="mb-12 text-neutral-700">
+      Thought‑starters on artistry, tech and the business of African music.
+    </p>
 
     <div class="space-y-16">
-      <!-- Post 1 -->
       <article class="flex flex-col gap-4">
-        <h2 class="text-2xl font-medium"><a href="blog-post1.html" class="hover:underline">Post One title</a></h2>
-        <p class="text-sm text-neutral-600">Published 01 Jan 2025 · 4 min read</p>
-        <p class="prose max-w-none text-neutral-800">First paragraph excerpt for teaser.</p>
+        <h2 class="text-2xl font-medium"><a href="blog-post1.html" class="hover:underline">Breaking the 1 % ceiling</a></h2>
+        <p class="text-sm text-neutral-600">01 Jan 2025 · 4 min read</p>
+        <p class="prose max-w-none text-neutral-800">Data‑driven strategies to move emerging artists from thousands to millions of streams.</p>
         <a href="blog-post1.html" class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
           See more <i data-feather="arrow-right" class="w-4 h-4"></i>
         </a>
       </article>
 
-      <!-- Post 2 -->
       <article class="flex flex-col gap-4">
-        <h2 class="text-2xl font-medium"><a href="blog-post2.html" class="hover:underline">Post Two title</a></h2>
-        <p class="text-sm text-neutral-600">Published 14 Feb 2025 · 3 min read</p>
-        <p class="prose max-w-none text-neutral-800">Excerpt paragraph.</p>
+        <h2 class="text-2xl font-medium"><a href="blog-post2.html" class="hover:underline">Inside our Nairobi writing camp</a></h2>
+        <p class="text-sm text-neutral-600">14 Feb 2025 · 3 min read</p>
+        <p class="prose max-w-none text-neutral-800">How cross‑border collaboration sparks genre‑bending hits.</p>
         <a href="blog-post2.html" class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
           See more <i data-feather="arrow-right" class="w-4 h-4"></i>
         </a>
       </article>
 
-      <!-- Post 3 -->
       <article class="flex flex-col gap-4">
-        <h2 class="text-2xl font-medium"><a href="blog-post3.html" class="hover:underline">Post Three title</a></h2>
-        <p class="text-sm text-neutral-600">Published 30 Mar 2025 · 5 min read</p>
-        <p class="prose max-w-none text-neutral-800">Excerpt paragraph.</p>
+        <h2 class="text-2xl font-medium"><a href="blog-post3.html" class="hover:underline">Why fair deals matter</a></h2>
+        <p class="text-sm text-neutral-600">30 Mar 2025 · 5 min read</p>
+        <p class="prose max-w-none text-neutral-800">A closer look at Alafia’s artist‑friendly model versus legacy label contracts.</p>
         <a href="blog-post3.html" class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
           See more <i data-feather="arrow-right" class="w-4 h-4"></i>
         </a>
