@@ -19,9 +19,10 @@
 </head>
 
 <body class="bg-white text-neutral-900 antialiased">
+
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
-    <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-6 lg:px-8">
+  <header class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur border-b border-neutral-200">
+    <div class="flex items-center justify-between h-16 px-6 lg:px-8">
       <a href="index.html" class="text-base font-semibold tracking-tight lowercase">alafia</a>
       <button id="navToggle" class="sm:hidden" aria-label="toggle menu"><i data-feather="menu"></i></button>
       <ul id="menu" class="hidden sm:flex gap-8 text-sm font-medium">
@@ -37,18 +38,21 @@
   <section class="relative isolate overflow-hidden">
     <div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-50 via-transparent to-pink-50"></div>
 
-    <div class="max-w-5xl mx-auto px-6 lg:px-8 pt-32 pb-40 text-center">
-      <h1 class="text-4xl sm:text-6xl font-semibold tracking-tight">
-        Powering Africa's Next Generation<br class="hidden sm:block">of Global Superstars
+    <div class="max-w-5xl mx-auto px-6 lg:px-8 pt-48 pb-56 text-center">
+      <h1 class="text-4xl sm:text-7xl font-semibold tracking-tight">
+        independent music<br class="hidden sm:block">for the world
       </h1>
-      <p class="mt-6 text-lg leading-8 text-neutral-600">
+      <p class="mt-8 text-lg leading-8 text-neutral-600">
         placeholder tagline – edit in canvas
       </p>
     </div>
   </section>
 
+  <!-- Separator -->
+  <div class="h-px bg-neutral-200 mb-24"></div>
+
   <!-- Gallery -->
-  <section class="max-w-7xl mx-auto px-6 lg:px-8 -mt-24 pb-32 grid gap-16 lg:grid-cols-2">
+  <section class="max-w-7xl mx-auto px-6 lg:px-8 pb-32 grid gap-24 lg:grid-cols-2">
     <article>
       <h2 class="text-xl font-semibold mb-4">Latest release</h2>
       <img src="img/latest.png" alt="latest release" class="w-full aspect-square object-cover border border-neutral-200">
@@ -58,6 +62,43 @@
       <h2 class="text-xl font-semibold mb-4">Upcoming event</h2>
       <img src="img/upcoming.png" alt="upcoming event" class="w-full aspect-square object-cover border border-neutral-200">
     </article>
+  </section>
+
+  <!-- Featured artists -->
+  <section class="bg-neutral-50 py-24">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <h2 class="text-2xl font-semibold mb-12 text-center">featured artists</h2>
+      <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="roster.html" class="group flex flex-col gap-4">
+          <img src="img/artist1.png" alt="artist 1" class="aspect-square object-cover border border-neutral-200 group-hover:opacity-80 transition">
+          <span class="font-medium">Artist One</span>
+        </a>
+        <a href="roster.html" class="group flex flex-col gap-4">
+          <img src="img/artist2.png" alt="artist 2" class="aspect-square object-cover border border-neutral-200 group-hover:opacity-80 transition">
+          <span class="font-medium">Artist Two</span>
+        </a>
+        <a href="roster.html" class="group flex flex-col gap-4">
+          <img src="img/artist3.png" alt="artist 3" class="aspect-square object-cover border border-neutral-200 group-hover:opacity-80 transition">
+          <span class="font-medium">Artist Three</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="py-24">
+    <div class="max-w-xl mx-auto px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-semibold mb-6">stay in the loop</h2>
+      <p class="text-neutral-600 mb-8">sign up for release updates and events.</p>
+      <form class="flex flex-col sm:flex-row gap-4 justify-center">
+        <input type="email" placeholder="you@example.com"
+               class="flex-1 border border-neutral-300 rounded-md px-4 py-3 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900" />
+        <button type="submit"
+                class="sm:w-auto inline-flex justify-center items-center px-6 py-3 rounded-md bg-neutral-900 text-white text-sm font-medium hover:bg-neutral-700 transition">
+          subscribe
+        </button>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
