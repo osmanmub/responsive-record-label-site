@@ -1,5 +1,2 @@
-img/ryd.png
-img/nikita.png
-img/ej-fya.png
-img/midethegoat.png
-img/saezn.png
+# Ignore all PNG images in the img directory
+img/*.png
