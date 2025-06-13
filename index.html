@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>alafia ▸ Home</title>
 
+  <!-- Tailwind 3 CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <script>
     tailwind.config = {
       theme: {
-        extend: {
-          fontFamily: { sans: ['Inter','system-ui','sans-serif'] }
-        }
+        extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'] } }
       }
     };
   </script>
+  <!-- Feather icons -->
   <script defer src="https://unpkg.com/feather-icons"></script>
 </head>
 
@@ -22,8 +22,8 @@
 
   <!-- Header -->
   <header class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur border-b border-neutral-200">
-    <div class="flex items-center justify-between h-16 px-6 lg:px-8">
-      <a href="index.html" class="text-base font-semibold tracking-tight lowercase">alafia</a>
+    <div class="flex items-center h-16 px-6 lg:px-8">
+      <a href="index.html" class="mr-auto text-base font-semibold tracking-tight lowercase">alafia</a>
       <button id="navToggle" class="sm:hidden" aria-label="toggle menu"><i data-feather="menu"></i></button>
       <ul id="menu" class="hidden sm:flex gap-8 text-sm font-medium">
         <li><a href="roster.html"    class="hover:underline">Roster</a></li>
@@ -38,17 +38,29 @@
   <section class="relative isolate overflow-hidden">
     <div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-50 via-transparent to-pink-50"></div>
 
-    <div class="max-w-5xl mx-auto px-6 lg:px-8 pt-48 pb-56 text-center">
-      <h1 class="text-4xl sm:text-7xl font-semibold tracking-tight">
-        independent music<br class="hidden sm:block">for the world
+    <div class="max-w-5xl mx-auto px-6 lg:px-8 pt-52 pb-60 text-center">
+      <h1 class="text-4xl sm:text-7xl font-semibold tracking-tight leading-tight">
+        Powering Africa’s next generation<br class="hidden sm:block">of global icons
       </h1>
       <p class="mt-8 text-lg leading-8 text-neutral-600">
-        placeholder tagline – edit in canvas
+        We turn extraordinary African voices into sustainable, world‑class careers through an
+        integrated mix of management, label services and publishing.
       </p>
     </div>
   </section>
 
-  <!-- Separator -->
+  <!-- Mission -->
+  <section class="py-24">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-semibold mb-6">our mission</h2>
+      <p class="text-lg leading-8 text-neutral-700">
+        Fewer than <strong>1 % of African artists</strong> ever cross one million streams. Alafia removes structural
+        barriers so talent can claim a meaningful share of the continent’s <strong>$500 million</strong> streaming
+        market.
+      </p>
+    </div>
+  </section>
+
   <div class="h-px bg-neutral-200 mb-24"></div>
 
   <!-- Gallery -->
@@ -64,32 +76,59 @@
     </article>
   </section>
 
-  <!-- Featured artists -->
+  <!-- Services -->
   <section class="bg-neutral-50 py-24">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <h2 class="text-2xl font-semibold mb-12 text-center">what we do</h2>
+      <div class="grid gap-12 md:grid-cols-3">
+        <div>
+          <h3 class="font-medium mb-2">Management&nbsp;&amp; representation</h3>
+          <p class="text-sm text-neutral-700">
+            Strategy, deal‑making and brand partnerships that amplify every revenue stream.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-medium mb-2">Label services</h3>
+          <p class="text-sm text-neutral-700">
+            Modular A&amp;R, marketing and distribution on transparent terms.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-medium mb-2">Publishing</h3>
+          <p class="text-sm text-neutral-700">
+            Royalty admin and sync licensing that turn compositions into global assets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured artists -->
+  <section class="py-24">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
       <h2 class="text-2xl font-semibold mb-12 text-center">featured artists</h2>
       <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
         <a href="roster.html" class="group flex flex-col gap-4">
-          <img src="img/artist1.png" alt="artist 1" class="aspect-square object-cover border border-neutral-200 group-hover:opacity-80 transition">
-          <span class="font-medium">Artist One</span>
+          <img src="img/artist1.png" alt="Nikita Kering’" class="aspect-square object-cover border border-neutral-200 group-hover:opacity-80 transition">
+          <span class="font-medium">Nikita Kering’</span>
         </a>
         <a href="roster.html" class="group flex flex-col gap-4">
-          <img src="img/artist2.png" alt="artist 2" class="aspect-square object-cover border border-neutral-200 group-hover:opacity-80 transition">
-          <span class="font-medium">Artist Two</span>
+          <img src="img/artist2.png" alt="Trill Xoe" class="aspect-square object-cover border border-neutral-200 group-hover:opacity-80 transition">
+          <span class="font-medium">Trill Xoe</span>
         </a>
         <a href="roster.html" class="group flex flex-col gap-4">
-          <img src="img/artist3.png" alt="artist 3" class="aspect-square object-cover border border-neutral-200 group-hover:opacity-80 transition">
-          <span class="font-medium">Artist Three</span>
+          <img src="img/artist3.png" alt="Mide The Goat" class="aspect-square object-cover border border-neutral-200 group-hover:opacity-80 transition">
+          <span class="font-medium">Mide The Goat</span>
         </a>
       </div>
     </div>
   </section>
 
   <!-- Newsletter -->
-  <section class="py-24">
+  <section class="bg-neutral-50 py-24">
     <div class="max-w-xl mx-auto px-6 lg:px-8 text-center">
       <h2 class="text-2xl font-semibold mb-6">stay in the loop</h2>
-      <p class="text-neutral-600 mb-8">sign up for release updates and events.</p>
+      <p class="text-neutral-600 mb-8">Sign up for releases, events &amp; insights.</p>
       <form class="flex flex-col sm:flex-row gap-4 justify-center">
         <input type="email" placeholder="you@example.com"
                class="flex-1 border border-neutral-300 rounded-md px-4 py-3 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900" />
