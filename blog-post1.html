@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>alafia ▸ Blog Post</title>
+  <title>alafia ▸ Breaking the 1 % ceiling</title>
+
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}};</script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'] } } } };
+  </script>
   <script defer src="https://unpkg.com/feather-icons"></script>
 </head>
+
 <body class="bg-white text-neutral-900 antialiased">
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
-    <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-6 lg:px-8">
-      <a href="index.html" class="text-base font-semibold lowercase tracking-tight">alafia</a>
+  <header class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur border-b border-neutral-200">
+    <div class="flex items-center h-16 px-6 lg:px-8">
+      <a href="index.html" class="mr-auto text-base font-semibold tracking-tight lowercase">alafia</a>
       <button id="navToggle" class="sm:hidden" aria-label="toggle menu"><i data-feather="menu"></i></button>
       <ul id="menu" class="hidden sm:flex gap-8 text-sm font-medium">
         <li><a href="roster.html"    class="hover:underline">Roster</a></li>
@@ -23,11 +27,17 @@
   </header>
 
   <main class="prose lg:prose-lg mx-auto px-6 lg:px-8 pt-24 pb-32">
-    <h1>Blog post title</h1>
-    <p class="text-sm text-neutral-600">01 Jan 2025 · 4 min read</p>
+    <h1>Breaking the 1 % ceiling</h1>
+    <p class="text-sm text-neutral-600">01 January 2025 · 4 min read</p>
 
-    <p>Lorem ipsum… full article content here.</p>
-    <p>…</p>
+    <p>Less than one per cent of African artists surpass a million streams. In this article we share the data‑first
+       release strategy that helped Trill Xoe jump from 2 million lifetime plays in 2022 to 91 million in 2024.</p>
+
+    <h2>1 . Market mapping</h2>
+    <p>We analyse DSP genre charts weekly to identify untapped niches …</p>
+
+    <h2>2 . Smart sequencing</h2>
+    <p>……</p>
   </main>
 
   <footer class="border-t border-neutral-200 py-10 text-center text-sm text-neutral-500">
