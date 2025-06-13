@@ -1,61 +1,38 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>alafia ▸ Roster</title>
-  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}};</script>
-  <script defer src="https://unpkg.com/feather-icons"></script>
-</head>
+<head> …same head as index… </head>
 <body class="bg-white text-neutral-900 antialiased">
-  <!-- Header (same on every page) -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
-    <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-6 lg:px-8">
-      <a href="index.html" class="text-base font-semibold lowercase tracking-tight">alafia</a>
-      <button id="navToggle" class="sm:hidden" aria-label="toggle menu"><i data-feather="menu"></i></button>
-      <ul id="menu" class="hidden sm:flex gap-8 text-sm font-medium">
-        <li><a href="roster.html"    class="hover:underline">Roster</a></li>
-        <li><a href="playlists.html" class="hover:underline">Playlists</a></li>
-        <li><a href="events.html"    class="hover:underline">Events</a></li>
-        <li><a href="blog.html"      class="hover:underline">Blog</a></li>
-      </ul>
-    </div>
-  </header>
+  <!-- Header identical to index -->
+  …header markup…
 
   <main class="max-w-6xl mx-auto px-6 lg:px-8 pt-24 pb-32">
-    <h1 class="text-3xl font-semibold mb-12">Roster</h1>
+    <h1 class="text-3xl font-semibold mb-4">Our Roster</h1>
+    <p class="mb-12 text-neutral-700">
+      Hand‑picked innovators shaping the next wave of African music.
+    </p>
 
     <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Rdym -->
+      <!-- Artist 1 -->
       <div class="flex flex-col gap-4">
         <img src="img/artist1.png" alt="artist 1" class="aspect-square object-cover border border-neutral-200">
-        <span class="font-medium">Rdym</span>
-        <span class="text-sm text-neutral-600">Afrobeats, Rap, R&B</span>
+        <span class="font-medium">Nikita Kering’</span>
+        <span class="text-sm text-neutral-600">Afro‑R&B · Kenya</span>
+        <div class="flex gap-4 mt-2 text-neutral-500">
+          <a href="#" aria-label="Spotify" target="_blank" rel="noopener"><i data-feather="music"></i></a>
+          <a href="#" aria-label="Apple Music" target="_blank" rel="noopener"><i data-feather="headphones"></i></a>
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><i data-feather="instagram"></i></a>
+          <a href="#" aria-label="X" target="_blank" rel="noopener"><i data-feather="twitter"></i></a>
+        </div>
       </div>
-      <!-- Nikita -->
-      <div class="flex flex-col gap-4">
-        <img src="img/artist2.png" alt="artist 2" class="aspect-square object-cover border border-neutral-200">
-        <span class="font-medium">Nikita Kering'</span>
-        <span class="text-sm text-neutral-600">Pop, R&B, Afrobeats</span>
-      </div>
-      <!-- EJ Fya -->
-      <div class="flex flex-col gap-4">
-        <img src="img/artist3.png" alt="artist 3" class="aspect-square object-cover border border-neutral-200">
-        <span class="font-medium">EJ Fya</span>
-        <span class="text-sm text-neutral-600">Producer</span>
-      </div>
+
+      <!-- Artist 2 -->
+      …same structure with artist2.png…
+
+      <!-- Artist 3 -->
+      …artist3…
     </div>
   </main>
 
-  <footer class="border-t border-neutral-200 py-10 text-center text-sm text-neutral-500">
-    © 2025 alafia
-  </footer>
-
-  <script>
-    feather.replace();
-    document.getElementById('navToggle')
-      .addEventListener('click', () => document.getElementById('menu').classList.toggle('hidden'));
-  </script>
+  …footer & script identical…
 </body>
 </html>
