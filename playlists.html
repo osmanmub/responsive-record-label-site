@@ -1,89 +1,31 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>alafia ▸ Home</title>
-
-  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter','system-ui','sans-serif'] }
-        }
-      }
-    };
-  </script>
-  <script defer src="https://unpkg.com/feather-icons"></script>
-</head>
+<html lang="en" class="scroll-smooth">
+<head> … </head>
 <body class="bg-white text-neutral-900 antialiased">
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
-    <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-6 lg:px-8">
-      <a href="index.html" class="text-base font-semibold lowercase tracking-tight">alafia</a>
-      <button id="navToggle" class="sm:hidden" aria-label="toggle menu"><i data-feather="menu"></i></button>
-      <ul id="menu" class="hidden sm:flex gap-8 text-sm font-medium">
-        <li><a href="roster.html"    class="hover:underline">Roster</a></li>
-        <li><a href="playlists.html" class="hover:underline">Playlists</a></li>
-        <li><a href="events.html"    class="hover:underline">Events</a></li>
-        <li><a href="blog.html"      class="hover:underline">Blog</a></li>
-      </ul>
-    </div>
-  </header>
+  …header…
 
   <main class="max-w-6xl mx-auto px-6 lg:px-8 pt-24 pb-32">
-    <h1 class="text-3xl font-semibold mb-12">Playlists</h1>
+    <h1 class="text-3xl font-semibold mb-4">Playlists</h1>
+    <p class="mb-12 text-neutral-700">
+      Curated journeys through Afrobeats, Alté and everything in‑between.
+    </p>
 
     <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Playlist card -->
       <div class="flex flex-col gap-4">
         <div class="aspect-square bg-neutral-100 border border-neutral-200 flex items-center justify-center">
           <span class="text-neutral-500">cover</span>
         </div>
         <span class="font-medium">Chill Vibes</span>
-        <p class="text-sm text-neutral-600">description</p>
-        <div class="flex gap-4 mt-2">
-          <!-- favicons (svg) -->
-          <a href="#" aria-label="Spotify"><i data-feather="music"></i></a>
-          <a href="#" aria-label="Apple Music"><i data-feather="headphones"></i></a>
+        <p class="text-sm text-neutral-600">Late‑night downtempo Afrosoul.</p>
+        <div class="flex gap-4 mt-2 text-neutral-500">
+          <a href="#" aria-label="Spotify" target="_blank"><i data-feather="music"></i></a>
+          <a href="#" aria-label="Apple Music" target="_blank"><i data-feather="headphones"></i></a>
         </div>
       </div>
-
-      <!-- Duplicate two more cards -->
-      <div class="flex flex-col gap-4">
-        <div class="aspect-square bg-neutral-100 border border-neutral-200 flex items-center justify-center">
-          <span class="text-neutral-500">cover</span>
-        </div>
-        <span class="font-medium">Hits Now</span>
-        <p class="text-sm text-neutral-600">description</p>
-        <div class="flex gap-4 mt-2">
-          <a href="#"><i data-feather="music"></i></a>
-          <a href="#"><i data-feather="headphones"></i></a>
-        </div>
-      </div>
-
-      <div class="flex flex-col gap-4">
-        <div class="aspect-square bg-neutral-100 border border-neutral-200 flex items-center justify-center">
-          <span class="text-neutral-500">cover</span>
-        </div>
-        <span class="font-medium">Deep Cuts</span>
-        <p class="text-sm text-neutral-600">description</p>
-        <div class="flex gap-4 mt-2">
-          <a href="#"><i data-feather="music"></i></a>
-          <a href="#"><i data-feather="headphones"></i></a>
-        </div>
-      </div>
+      …two more cards…
     </div>
   </main>
 
-  <footer class="border-t border-neutral-200 py-10 text-center text-sm text-neutral-500">
-    © 2025 alafia
-  </footer>
-
-  <script>
-    feather.replace();
-    document.getElementById('navToggle')
-      .addEventListener('click', () => document.getElementById('menu').classList.toggle('hidden'));
-  </script>
+  …footer & script…
 </body>
 </html>
