@@ -25,3 +25,8 @@ The project has expanded beyond the original four pages and now includes:
 This project is entirely static and served via GitHub Pages. There is no build
 step—pushing your committed changes to the hosting branch is all that is
 required to deploy updates.
+
+## Testing
+
+This repository includes a minimal npm setup. Run `npm test` to execute the
+placeholder test script.
