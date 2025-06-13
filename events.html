@@ -1,26 +1,21 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>alafia ▸ Home</title>
+  <title>alafia ▸ Events</title>
 
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter','system-ui','sans-serif'] }
-        }
-      }
-    };
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'] } } } };
   </script>
   <script defer src="https://unpkg.com/feather-icons"></script>
 </head>
+
 <body class="bg-white text-neutral-900 antialiased">
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
-    <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-6 lg:px-8">
-      <a href="index.html" class="text-base font-semibold lowercase tracking-tight">alafia</a>
+  <header class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur border-b border-neutral-200">
+    <div class="flex items-center h-16 px-6 lg:px-8">
+      <a href="index.html" class="mr-auto text-base font-semibold tracking-tight lowercase">alafia</a>
       <button id="navToggle" class="sm:hidden" aria-label="toggle menu"><i data-feather="menu"></i></button>
       <ul id="menu" class="hidden sm:flex gap-8 text-sm font-medium">
         <li><a href="roster.html"    class="hover:underline">Roster</a></li>
@@ -32,26 +27,25 @@
   </header>
 
   <main class="max-w-4xl mx-auto px-6 lg:px-8 pt-24 pb-32">
-    <h1 class="text-3xl font-semibold mb-12">Events</h1>
+    <h1 class="text-3xl font-semibold mb-4">Live Events</h1>
+    <p class="mb-12 text-neutral-700">
+      Experience Alafia talent on stage — from Lagos block parties to global festival main‑stages.
+    </p>
 
     <div class="space-y-12">
-      <!-- Event item -->
       <article class="border border-neutral-200 p-6 rounded-lg flex flex-col sm:flex-row sm:items-center gap-6">
         <div class="flex-none w-24 text-center">
-          <time datetime="2025-09-12" class="block text-xl font-semibold">12 Sep</time>
+          <time datetime="2025-09-12" class="block text-xl font-semibold">12 Sep</time>
           <span class="block text-sm text-neutral-600">2025</span>
         </div>
         <div class="flex-1">
-          <h2 class="text-lg font-medium">Show Title</h2>
-          <p class="text-sm text-neutral-600">Venue · City</p>
+          <h2 class="text-lg font-medium">Alafia Showcase — Accra</h2>
+          <p class="text-sm text-neutral-600">Alliance Française · Accra, GH</p>
         </div>
-        <a href="#"
-           class="inline-flex items-center gap-1 text-sm font-medium hover:underline"
-           target="_blank" rel="noopener">
-          Tickets <i data-feather="external-link" class="w-4 h-4"></i>
+        <a href="event-1.html" class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
+          Details <i data-feather="arrow-right" class="w-4 h-4"></i>
         </a>
       </article>
-      <!-- clone for additional events -->
     </div>
   </main>
 
