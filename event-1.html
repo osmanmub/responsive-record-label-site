@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>alafia ▸ Showcase Accra · 12 Sep 2025</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'] } } } };
+  </script>
+  <script defer src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="bg-white text-neutral-900 antialiased">
+  <header class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur border-b border-neutral-200">
+    <div class="flex items-center h-16 px-6 lg:px-8">
+      <a href="index.html" class="mr-auto text-base font-semibold tracking-tight lowercase">alafia</a>
+      <button id="navToggle" class="sm:hidden" aria-label="toggle menu"><i data-feather="menu"></i></button>
+      <ul id="menu" class="hidden sm:flex gap-8 text-sm font-medium">
+        <li><a href="roster.html"    class="hover:underline">Roster</a></li>
+        <li><a href="playlists.html" class="hover:underline">Playlists</a></li>
+        <li><a href="events.html"    class="hover:underline">Events</a></li>
+        <li><a href="blog.html"      class="hover:underline">Blog</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="prose lg:prose-lg mx-auto px-6 lg:px-8 pt-24 pb-32">
+    <h1>Alafia Showcase — Accra</h1>
+    <p class="text-sm text-neutral-600">12 September 2025 · Alliance Française · Accra, Ghana</p>
+
+    <p>Join Nikita Kering’, Trill Xoe and Mide The Goat for a night celebrating the future of African music. Expect
+       live debuts of upcoming releases, surprise guests and an after‑party hosted by our partner DJ Collective.</p>
+
+    <h2>Schedule</h2>
+    <ul>
+      <li><strong>7 pm</strong> — Doors / DJ Set</li>
+      <li><strong>8 pm</strong> — Mide The Goat</li>
+      <li><strong>9 pm</strong> — Trill Xoe</li>
+      <li><strong>10 pm</strong> — Nikita Kering’</li>
+    </ul>
+
+    <p>
+      <a href="https://tickets.example.com/show" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
+        Buy tickets&nbsp;<i data-feather="external-link" class="w-4 h-4"></i>
+      </a>
+    </p>
+  </main>
+
+  <footer class="border-t border-neutral-200 py-10 text-center text-sm text-neutral-500">
+    © 2025 alafia
+  </footer>
+
+  <script>
+    feather.replace();
+    document.getElementById('navToggle')
+      .addEventListener('click', () => document.getElementById('menu').classList.toggle('hidden'));
+  </script>
+</body>
+</html>
