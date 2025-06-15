@@ -21,6 +21,15 @@
 </head>
 
 <body class="pt-16 bg-white text-neutral-900 antialiased">
+  <!-- Promo popup -->
+  <div id="promoPopup" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
+    <div class="relative w-full max-w-xl">
+      <button id="promoClose" class="absolute top-2 right-2 text-white">
+        <i data-feather="x"></i>
+      </button>
+      <video src="img/Jo.mp4" controls autoplay class="w-full rounded-md"></video>
+    </div>
+  </div>
 
   <!-- Header -->
   <header class="fixed top-0 left-0 z-50 w-full bg-white/90 backdrop-blur border-b border-neutral-200">
@@ -39,7 +48,6 @@
   <!-- Hero -->
   <section class="relative isolate overflow-hidden min-h-screen">
     <div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-50 via-transparent to-pink-50"></div>
-    <video src="img/Jo.mp4" autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover -z-20"></video>
 
     <div class="max-w-5xl mx-auto px-6 lg:px-8 pt-52 pb-60 text-center">
       <h1 class="text-4xl sm:text-7xl font-semibold tracking-tight leading-tight">
