@@ -6,12 +6,4 @@ document.addEventListener('DOMContentLoaded', () => {
     navToggle.addEventListener('click', () => menu.classList.toggle('hidden'));
   }
 
-  const popup = document.getElementById('promoPopup');
-  const close = document.getElementById('promoClose');
-  if (popup) {
-    popup.classList.remove('hidden');
-    if (close) {
-      close.addEventListener('click', () => popup.classList.add('hidden'));
-    }
-  }
 });
