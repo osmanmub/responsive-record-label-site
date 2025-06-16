@@ -5,4 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (navToggle && menu) {
     navToggle.addEventListener('click', () => menu.classList.toggle('hidden'));
   }
+
+  const closeVideo = document.getElementById('closeVideo');
+  const heroVideo = document.getElementById('heroVideo');
+  if (closeVideo && heroVideo) {
+    closeVideo.addEventListener('click', () => {
+      heroVideo.pause();
+      heroVideo.remove();
+      closeVideo.remove();
+    });
+  }
 });
