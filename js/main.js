@@ -6,4 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     navToggle.addEventListener('click', () => menu.classList.toggle('hidden'));
   }
 
+  // Load Cloudflare Web Analytics
+  const analytics = document.createElement('script');
+  analytics.defer = true;
+  analytics.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  analytics.setAttribute('data-cf-beacon', '{"token": "YOUR_CLOUDFLARE_TOKEN"}');
+  document.head.appendChild(analytics);
+
 });
