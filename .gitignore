@@ -1,2 +1,2 @@
-# Ignore all PNG images in the img directory
-img/*.png
+# Previously ignored all PNG images in the img directory.
+# img/*.png (allow PNG images to be tracked)
