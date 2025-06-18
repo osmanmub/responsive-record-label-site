@@ -18,13 +18,12 @@ The project has expanded beyond the original four pages and now includes:
 
 ## Publishing your changes
 1. Commit your edits with a descriptive message.
-2. Push to the branch used for hosting (for GitHub Pages this is typically `gh-pages` or `main`).
-3. If you use a custom domain, create a `CNAME` file in the repository root containing only your domain name.
-4. Updates can take a few minutes to propagate. If you do not see the new version right away, try doing a hard refresh or clearing your browser's cache.
+2. Push them to the production branch that Cloudflare Pages deploys from.
+3. Set up a CNAME or custom domain through the Cloudflare dashboard.
+4. Cloudflare will automatically deploy your site after the push.
 
-This project is entirely static and served via GitHub Pages. There is no build
-step—pushing your committed changes to the hosting branch is all that is
-required to deploy updates.
+This project is entirely static and served via **Cloudflare Pages**.
+Pushing to the production branch is all that's needed to publish updates.
 
 ## Testing
 
