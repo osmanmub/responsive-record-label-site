@@ -29,3 +29,10 @@ Pushing to the production branch is all that's needed to publish updates.
 
 This repository includes a minimal npm setup. Run `npm test` to execute the
 placeholder test script.
+
+## Analytics
+
+The site now loads [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/) via a small script in
+`js/main.js`. To start tracking visitor statistics, obtain a token from the
+Cloudflare dashboard and replace the `YOUR_CLOUDFLARE_TOKEN` placeholder in the
+script.
