@@ -14,7 +14,7 @@ The project has expanded beyond the original four pages and now includes:
 - `roster.html` – artist roster
 - `playlists.html` – featured playlists
 - `events.html` – upcoming events
-- `blog.html` and the article `blog-post4.html`
+- `blog.html` and the articles `blog-post5.html` and `blog-post4.html`
 
 ## Publishing your changes
 1. Commit your edits with a descriptive message.
