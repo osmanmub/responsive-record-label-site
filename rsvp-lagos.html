@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sounds of the City — Lagos · Q3 2025 – The Alafia Collective</title>
+  <meta name="description"
+        content="RSVP to join The Alafia Collective live at Terra Kulture in Lagos." />
+  <meta property="og:title" content="Sounds of the City — Lagos · Q3 2025 – The Alafia Collective">
+  <meta property="og:description" content="RSVP to join The Alafia Collective live at Terra Kulture in Lagos.">
+  <meta property="og:image" content="img/Sounds.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://alafia.me/rsvp-lagos.html" />
+
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'] } } } };
+  </script>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script defer src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="pt-16 bg-white text-neutral-900 antialiased">
+  <header class="fixed top-0 left-0 z-50 w-full bg-white/90 backdrop-blur border-b border-neutral-200">
+    <div class="flex items-center h-16 px-6 lg:px-8">
+      <a href="index.html" class="mr-auto text-base font-semibold tracking-tight lowercase">the alafia collective</a>
+      <button id="navToggle" class="sm:hidden" aria-label="toggle menu"><i data-feather="menu"></i></button>
+      <ul id="menu" class="hidden absolute top-full inset-x-0 z-40 flex-col gap-4 p-6 text-base font-medium bg-white border-b border-neutral-200 sm:static sm:flex sm:flex-row sm:gap-8 sm:p-0 sm:border-0 sm:bg-transparent sm:text-sm">
+        <li><a href="roster.html"    class="hover:underline">Roster</a></li>
+        <li><a href="playlists.html" class="hover:underline">Playlists</a></li>
+        <li><a href="events.html"    class="hover:underline">Events</a></li>
+        <li><a href="blog.html"      class="hover:underline">Blog</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="prose lg:prose-lg mx-auto px-6 lg:px-8 pt-24 pb-32">
+    <h1>Sounds of the City — Lagos</h1>
+    <p class="text-sm text-neutral-600">Q3 2025 · Terra Kulture · Lagos, Nigeria</p>
+
+    <form action="https://formspree.io/f/lagosrsvp" method="POST" class="mt-6 space-y-4">
+      <div>
+        <label for="name" class="block text-sm font-medium">Name</label>
+        <input type="text" id="name" name="name" required class="mt-1 block w-full border border-neutral-300 rounded-md p-2" />
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium">Email</label>
+        <input type="email" id="email" name="email" required class="mt-1 block w-full border border-neutral-300 rounded-md p-2" />
+      </div>
+      <div>
+        <label for="guests" class="block text-sm font-medium">Number of Guests</label>
+        <input type="number" id="guests" name="guests" min="1" class="mt-1 block w-full border border-neutral-300 rounded-md p-2" />
+      </div>
+      <button type="submit" class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
+        RSVP <i data-feather="arrow-right" class="w-4 h-4"></i>
+      </button>
+    </form>
+  </main>
+
+  <footer class="border-t border-neutral-200 py-10 text-center text-sm text-neutral-500">
+    © 2025 the alafia collective
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
