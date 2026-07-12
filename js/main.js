@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     header .alafia-brand__wordmark { display: none; }
 
     .relative.isolate.overflow-hidden.min-h-screen {
-      min-height: min(760px, calc(100vh - 76px)) !important;
+      min-height: min(760px, calc(100vh - 64px)) !important;
       background:
         radial-gradient(circle at 72% 32%, rgba(215, 255, 63, .22), transparent 20rem),
         radial-gradient(circle at 18% 82%, rgba(255, 255, 255, .11), transparent 24rem),
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     @media (max-width: 639px) {
       header, header > div { height: 66px !important; }
-      body { padding-top: 64px !important; }
+      body { padding-top: 66px !important; }
       #menu {
         top: 66px !important;
         background: var(--alafia-paper) !important;
