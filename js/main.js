@@ -24,13 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     header {
-      height: 76px;
-      background: transparent !important;
-      border-bottom-color: transparent !important;
-      backdrop-filter: none;
+      height: 64px;
+      background: var(--alafia-paper) !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
     }
 
-    header > div { height: 76px !important; }
+    header > div { height: 64px !important; }
     header a:not(.alafia-brand) {
       position: relative;
       color: var(--alafia-ink) !important;
@@ -261,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     @media (max-width: 639px) {
       header, header > div { height: 66px !important; }
-      body { padding-top: 66px !important; }
+      body { padding-top: 64px !important; }
       #menu {
         top: 66px !important;
         background: var(--alafia-paper) !important;
