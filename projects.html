@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alafia – Selected Projects</title>
+  <meta name="description" content="Songs Alafia has helped bring to life across management, production, distribution and executive production." />
+  <meta property="og:title" content="Alafia – Selected Projects">
+  <meta property="og:description" content="Songs Alafia has helped bring to life across management, production, distribution and executive production.">
+  <meta property="og:image" content="img/rapid-fyah-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://alafia.me/projects.html" />
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'] } } } };
+  </script>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script defer src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="pt-16 bg-white text-neutral-900 antialiased">
+  <header class="fixed top-0 left-0 z-50 w-full bg-white/90 backdrop-blur border-b border-neutral-200">
+    <div class="flex items-center h-16 px-6 lg:px-8">
+      <a href="index.html" class="mr-auto text-base font-semibold tracking-tight lowercase">Alafia</a>
+      <button id="navToggle" class="sm:hidden" aria-label="toggle menu"><i data-feather="menu"></i></button>
+      <ul id="menu" class="hidden absolute top-full inset-x-0 z-40 flex-col gap-4 p-6 text-base font-medium bg-white border-b border-neutral-200 sm:static sm:flex sm:flex-row sm:gap-8 sm:p-0 sm:border-0 sm:bg-transparent sm:text-sm">
+        <li><a href="roster.html" class="hover:underline">Roster</a></li>
+        <li><a href="playlists.html" class="hover:underline">Playlists</a></li>
+        <li><a href="events.html" class="hover:underline">Events</a></li>
+        <li><a href="blog.html" class="hover:underline">Blog</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 lg:px-8 pt-24 pb-32">
+    <h1 class="text-3xl font-semibold mb-4">Selected Projects</h1>
+    <p class="mb-12 text-neutral-700">Songs we have helped bring to life across management, production, distribution and executive production.</p>
+
+    <section class="grid gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] md:items-center">
+      <img src="img/rapid-fyah-cover.svg" alt="Original Koffee and Skillibeng — RAPID FYAH cover art" class="w-full aspect-square object-cover border border-neutral-200">
+      <div>
+        <p class="text-sm text-neutral-600 mb-3">Original Koffee &amp; Skillibeng</p>
+        <h2 class="text-4xl font-semibold">RAPID FYAH</h2>
+        <p class="mt-4 text-neutral-700">Produced by EJ Fya</p>
+        <p class="mt-2 text-sm text-neutral-600">Role: Producer</p>
+        <a href="https://lnk.to/RAPIDFYAH" target="_blank" rel="noopener noreferrer" class="inline-flex items-center mt-6 text-sm font-medium hover:underline">
+          Stream across platforms <i data-feather="arrow-up-right" class="w-4 h-4 ml-2"></i>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-24 border border-neutral-200 p-8 md:p-12">
+      <p class="text-sm text-neutral-600 mb-3">Listen further</p>
+      <h2 class="text-3xl font-semibold">Alafia playlist</h2>
+      <p class="mt-4 max-w-2xl text-neutral-700">Explore the songs and artists in our orbit through the Alafia playlist.</p>
+      <a href="https://open.spotify.com/playlist/6xhAWwMGzB9z0goO5GKKcF?si=flK2lC_jQZ2zAMSFXLr3nQ&utm_source=copy-link&pi=NlLvomH5TwSNN" target="_blank" rel="noopener noreferrer" class="inline-flex items-center mt-6 text-sm font-medium hover:underline">
+        Open playlist on Spotify <i data-feather="arrow-up-right" class="w-4 h-4 ml-2"></i>
+      </a>
+    </section>
+  </main>
+
+  <footer class="border-t border-neutral-200 py-10 text-center text-sm text-neutral-500">© 2026 Alafia</footer>
+  <script src="js/main.js?v=20260712-5"></script>
+</body>
+</html>
