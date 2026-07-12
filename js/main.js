@@ -65,27 +65,19 @@ document.addEventListener('DOMContentLoaded', () => {
       text-transform: uppercase;
     }
     .alafia-brand__mark {
-      position: relative;
-      display: inline-block;
-      width: 35px;
-      height: 35px;
-      flex: 0 0 35px;
-      overflow: hidden;
-      background: var(--alafia-ink);
-      box-shadow: 4px 4px 0 var(--alafia-accent);
+      display: inline-flex;
+      width: 32px;
+      height: 36px;
+      flex: 0 0 32px;
+      color: var(--alafia-ink);
     }
-    .alafia-brand__mark::before,
-    .alafia-brand__mark::after {
-      position: absolute;
-      top: 3px;
-      left: 13px;
-      width: 8px;
-      height: 29px;
-      content: '';
-      background: var(--alafia-paper);
-      transform: rotate(34deg);
+    .alafia-brand__mark svg {
+      display: block;
+      width: 100%;
+      height: 100%;
     }
-    .alafia-brand__mark::after { transform: rotate(-34deg); }
+    .alafia-brand--inverse { color: var(--alafia-paper) !important; }
+    .alafia-brand--inverse .alafia-brand__mark { color: var(--alafia-paper); }
     .alafia-brand__wordmark { white-space: nowrap; }
 
     .relative.isolate.overflow-hidden.min-h-screen {
@@ -198,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (brand) {
     brand.className = 'alafia-brand mr-auto';
     brand.setAttribute('aria-label', 'Alafia Collective home');
-    brand.innerHTML = '<span class="alafia-brand__mark" aria-hidden="true"></span><span class="alafia-brand__wordmark">Alafia Collective</span>';
+    brand.innerHTML = '<span class="alafia-brand__mark" aria-hidden="true"><svg viewBox="0 0 288 324" role="img" aria-label="Alafia X mark"><path fill="currentColor" fill-rule="evenodd" d="M0 0h64l22 74L111 0h58l23 74L224 0h64l-53 161 53 163h-64l-24-68-26 68h-64l-24-68-22 68H0l53-163ZM126 126h36l12 35-12 35h-36l-12-35Z" clip-rule="evenodd"/></svg></span><span class="alafia-brand__wordmark">Alafia Collective</span>';
   }
 
   const menu = document.getElementById('menu');
