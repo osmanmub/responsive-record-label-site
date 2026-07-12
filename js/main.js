@@ -160,12 +160,70 @@ document.addEventListener('DOMContentLoaded', () => {
     button { letter-spacing: .06em; text-transform: uppercase; }
     input:focus { --tw-ring-color: var(--alafia-ink) !important; }
 
-    footer {
-      padding-block: 2.4rem !important;
+    footer.alafia-footer {
+      padding: clamp(3rem, 6vw, 5.5rem) 1.5rem 1.5rem !important;
       background: var(--alafia-ink);
       border: 0 !important;
-      color: rgba(242, 240, 235, .62) !important;
+      color: rgba(242, 240, 235, .68) !important;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      letter-spacing: normal;
+      text-align: left;
+      text-transform: none;
+    }
+    .alafia-footer__inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(12rem, 1fr);
+      gap: 3rem;
+      width: min(100%, 72rem);
+      margin: 0 auto;
+    }
+    .alafia-footer .alafia-brand {
+      margin-bottom: 1.2rem;
+      color: var(--alafia-paper) !important;
+    }
+    .alafia-footer__statement {
+      max-width: 28rem;
+      margin: 0;
+      color: rgba(242, 240, 235, .68);
+      font-size: .94rem;
+      line-height: 1.65;
+    }
+    .alafia-footer__label {
+      margin: 0 0 .9rem;
+      color: var(--alafia-accent);
       font-family: 'DM Mono', monospace;
+      font-size: .68rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .alafia-footer__links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .8rem 1.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .alafia-footer__links a {
+      color: var(--alafia-paper);
+      font-size: .84rem;
+      font-weight: 600;
+      letter-spacing: .03em;
+      text-decoration: none;
+    }
+    .alafia-footer__links a:hover { color: var(--alafia-accent); }
+    .alafia-footer__meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      width: min(100%, 72rem);
+      margin: clamp(2.5rem, 5vw, 4rem) auto 0;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(242, 240, 235, .18);
+      color: rgba(242, 240, 235, .46);
+      font-family: 'DM Mono', monospace;
+      font-size: .65rem;
       letter-spacing: .08em;
       text-transform: uppercase;
     }
@@ -182,6 +240,10 @@ document.addEventListener('DOMContentLoaded', () => {
       .alafia-brand__wordmark { display: none; }
       .alafia-brand { gap: 0; }
       .relative.isolate.overflow-hidden.min-h-screen::after { right: -6rem; width: 18rem; height: 18rem; }
+      footer.alafia-footer { padding-inline: 1.5rem !important; }
+      .alafia-footer__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .alafia-footer__links { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; }
+      .alafia-footer__meta { flex-direction: column; }
     }
   `;
   document.head.appendChild(siteStyles);
@@ -200,6 +262,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const rosterItem = menu.querySelector('a[href="roster.html"]')?.closest('li');
     if (rosterItem) rosterItem.insertAdjacentElement('afterend', alumniItem);
     else menu.prepend(alumniItem);
+  }
+
+  const footer = document.querySelector('footer');
+  if (footer) {
+    footer.className = 'alafia-footer';
+    footer.innerHTML =
+      '<div class="alafia-footer__inner">' +
+        '<div>' +
+          '<a class="alafia-brand alafia-brand--inverse" href="index.html" aria-label="Alafia Collective home">' +
+            '<span class="alafia-brand__mark" aria-hidden="true"><svg viewBox="0 0 288 324" role="img" aria-label="Alafia X mark"><path fill="currentColor" fill-rule="evenodd" d="M0 0h64l22 74L111 0h58l23 74L224 0h64l-53 161 53 163h-64l-24-68-26 68h-64l-24-68-22 68H0l53-163ZM126 126h36l12 35-12 35h-36l-12-35Z" clip-rule="evenodd"/></svg></span>' +
+            '<span class="alafia-brand__wordmark">Alafia Collective</span>' +
+          '</a>' +
+          '<p class="alafia-footer__statement">Management, label services and publishing for Africa’s next generation of global icons.</p>' +
+        '</div>' +
+        '<div>' +
+          '<p class="alafia-footer__label">Explore</p>' +
+          '<ul class="alafia-footer__links">' +
+            '<li><a href="roster.html">Current Roster</a></li>' +
+            '<li><a href="alumni.html">Alumni</a></li>' +
+            '<li><a href="playlists.html">Playlists</a></li>' +
+            '<li><a href="events.html">Events</a></li>' +
+            '<li><a href="blog.html">Journal</a></li>' +
+          '</ul>' +
+        '</div>' +
+      '</div>' +
+      '<div class="alafia-footer__meta"><span>© ' + new Date().getFullYear() + ' Alafia Collective</span><span>Africa, without borders</span></div>';
   }
 
   if (window.feather) feather.replace();
