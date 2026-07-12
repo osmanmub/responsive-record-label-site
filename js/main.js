@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     header {
       height: 76px;
-      background: rgba(242, 240, 235, .88) !important;
-      border-bottom-color: var(--alafia-line) !important;
-      backdrop-filter: blur(16px);
+      background: transparent !important;
+      border-bottom-color: transparent !important;
+      backdrop-filter: none;
     }
 
     header > div { height: 76px !important; }
@@ -80,6 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
     .alafia-brand--inverse { color: var(--alafia-paper) !important; }
     .alafia-brand--inverse .alafia-brand__mark { color: var(--alafia-paper); }
     .alafia-brand__wordmark { white-space: nowrap; }
+    header .alafia-brand { gap: 0; }
+    header .alafia-brand__wordmark { display: none; }
 
     .relative.isolate.overflow-hidden.min-h-screen {
       min-height: min(760px, calc(100vh - 76px)) !important;
@@ -292,6 +294,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (rosterItem) rosterItem.insertAdjacentElement('afterend', alumniItem);
     else menu.prepend(alumniItem);
   }
+  const projectsLink = menu?.querySelector('a[href="events.html"]');
+  if (projectsLink) {
+    projectsLink.href = 'projects.html';
+    projectsLink.textContent = 'Projects';
+  }
 
   const footer = document.querySelector('footer');
   if (footer) {
@@ -312,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
             '<li><a href="roster.html">Current Roster</a></li>' +
             '<li><a href="alumni.html">Alumni</a></li>' +
             '<li><a href="playlists.html">Playlists</a></li>' +
-            '<li><a href="events.html">Events</a></li>' +
+            '<li><a href="projects.html">Projects</a></li>' +
             '<li><a href="blog.html">Journal</a></li>' +
           '</ul>' +
         '</div>' +
