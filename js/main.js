@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (brand) {
     brand.className = 'alafia-brand mr-auto';
     brand.setAttribute('aria-label', 'Alafia home');
-    brand.innerHTML = '<span class="alafia-brand__mark" aria-hidden="true"><img src="img/alafia-x-mark.svg" alt="" /></span><span class="alafia-brand__wordmark">Alafia</span>';
+    brand.innerHTML = '<span class="alafia-brand__mark" aria-hidden="true"><img src="img/alafia-x-mark-black.svg" alt="" /></span><span class="alafia-brand__wordmark">Alafia</span>';
   }
 
   const menu = document.getElementById('menu');
@@ -307,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
       '<div class="alafia-footer__inner">' +
         '<div>' +
           '<a class="alafia-brand alafia-brand--inverse" href="index.html" aria-label="Alafia home">' +
-            '<span class="alafia-brand__mark" aria-hidden="true"><img src="img/alafia-x-mark.svg" alt="" /></span>' +
+            '<span class="alafia-brand__mark" aria-hidden="true"><img src="img/alafia-x-mark-white.svg" alt="" /></span>' +
             '<span class="alafia-brand__wordmark">Alafia</span>' +
           '</a>' +
           '<p class="alafia-footer__statement">Building lasting careers for African artists, songwriters and producers.</p>' +
