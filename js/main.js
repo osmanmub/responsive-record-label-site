@@ -201,9 +201,17 @@ document.addEventListener('DOMContentLoaded', () => {
     brand.innerHTML = '<span class="alafia-brand__mark" aria-hidden="true"></span><span class="alafia-brand__wordmark">Alafia Collective</span>';
   }
 
+  const menu = document.getElementById('menu');
+  if (menu && !menu.querySelector('a[href="alumni.html"]')) {
+    const alumniItem = document.createElement('li');
+    alumniItem.innerHTML = '<a href="alumni.html" class="hover:underline">Alumni</a>';
+    const rosterItem = menu.querySelector('a[href="roster.html"]')?.closest('li');
+    if (rosterItem) rosterItem.insertAdjacentElement('afterend', alumniItem);
+    else menu.prepend(alumniItem);
+  }
+
   if (window.feather) feather.replace();
   const navToggle = document.getElementById('navToggle');
-  const menu = document.getElementById('menu');
   if (navToggle && menu) {
     navToggle.addEventListener('click', () => menu.classList.toggle('hidden'));
   }
