@@ -280,8 +280,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const brand = document.querySelector('header a[href="index.html"]');
   if (brand) {
     brand.className = 'alafia-brand mr-auto';
-    brand.setAttribute('aria-label', 'Alafia Collective home');
-    brand.innerHTML = '<span class="alafia-brand__mark" aria-hidden="true"><img src="img/alafia-x-mark.svg" alt="" /></span><span class="alafia-brand__wordmark">Alafia Collective</span>';
+    brand.setAttribute('aria-label', 'Alafia home');
+    brand.innerHTML = '<span class="alafia-brand__mark" aria-hidden="true"><img src="img/alafia-x-mark.svg" alt="" /></span><span class="alafia-brand__wordmark">Alafia</span>';
   }
 
   const menu = document.getElementById('menu');
@@ -299,9 +299,9 @@ document.addEventListener('DOMContentLoaded', () => {
     footer.innerHTML =
       '<div class="alafia-footer__inner">' +
         '<div>' +
-          '<a class="alafia-brand alafia-brand--inverse" href="index.html" aria-label="Alafia Collective home">' +
+          '<a class="alafia-brand alafia-brand--inverse" href="index.html" aria-label="Alafia home">' +
             '<span class="alafia-brand__mark" aria-hidden="true"><img src="img/alafia-x-mark.svg" alt="" /></span>' +
-            '<span class="alafia-brand__wordmark">Alafia Collective</span>' +
+            '<span class="alafia-brand__wordmark">Alafia</span>' +
           '</a>' +
           '<p class="alafia-footer__statement">Building lasting careers for African artists, songwriters and producers.</p>' +
           '<p class="alafia-footer__services">Management · Label Services · Publishing</p>' +
@@ -317,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
           '</ul>' +
         '</div>' +
       '</div>' +
-      '<div class="alafia-footer__meta"><span>© 2026 Alafia Collective. All rights reserved.</span><span>Independent music infrastructure for Africa.</span></div>';
+      '<div class="alafia-footer__meta"><span>© 2026 Alafia. All rights reserved.</span><span>Independent music infrastructure for Africa.</span></div>';
   }
 
   if (window.feather) feather.replace();
