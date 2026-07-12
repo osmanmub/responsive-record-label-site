@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alafia Collective – Alumni</title>
+  <meta name="description" content="Artists who have been part of the Alafia Collective story." />
+  <meta property="og:title" content="Alafia Collective – Alumni">
+  <meta property="og:description" content="Artists who have been part of the Alafia Collective story.">
+  <meta property="og:image" content="img/rydm.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://alafia.me/alumni.html" />
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'] } } } };
+  </script>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script defer src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="pt-16 bg-white text-neutral-900 antialiased">
+  <header class="fixed top-0 left-0 z-50 w-full bg-white/90 backdrop-blur border-b border-neutral-200">
+    <div class="flex items-center h-16 px-6 lg:px-8">
+      <a href="index.html" class="mr-auto text-base font-semibold tracking-tight lowercase">the alafia collective</a>
+      <button id="navToggle" class="sm:hidden" aria-label="toggle menu"><i data-feather="menu"></i></button>
+      <ul id="menu" class="hidden absolute top-full inset-x-0 z-40 flex-col gap-4 p-6 text-base font-medium bg-white border-b border-neutral-200 sm:static sm:flex sm:flex-row sm:gap-8 sm:p-0 sm:border-0 sm:bg-transparent sm:text-sm">
+        <li><a href="roster.html" class="hover:underline">Roster</a></li>
+        <li><a href="playlists.html" class="hover:underline">Playlists</a></li>
+        <li><a href="events.html" class="hover:underline">Events</a></li>
+        <li><a href="blog.html" class="hover:underline">Blog</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 lg:px-8 pt-24 pb-32">
+    <h1 class="text-3xl font-semibold mb-4">Alumni</h1>
+    <p class="mb-12 text-neutral-700">Artists who have been part of the Alafia Collective story.</p>
+
+    <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="flex flex-col gap-4">
+        <img src="img/rydm.jpg" alt="Rydm" class="aspect-square object-cover border border-neutral-200">
+        <span class="font-medium">Rydm</span>
+        <span class="text-sm text-neutral-600">Nigeria - Afrobeats, Rap, R&amp;B</span>
+        <div class="flex gap-4 mt-2 text-neutral-500">
+          <a href="https://open.spotify.com/artist/7LESUCcviSNkwCjlFqvhoQ?trackId=40ezsDqIIScN5MTYOz5Enj" aria-label="Spotify" target="_blank" rel="noopener noreferrer"><i data-feather="music"></i></a>
+          <a href="https://www.instagram.com/rydmjay" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i data-feather="instagram"></i></a>
+          <a href="https://x.com/feeltherydm" aria-label="X" target="_blank" rel="noopener noreferrer"><i data-feather="twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <img src="img/nikita.png" alt="Nikita" class="aspect-square object-cover border border-neutral-200">
+        <span class="font-medium">Nikita</span>
+        <span class="text-sm text-neutral-600">Kenya - R&amp;B, Afrobeats, Soul</span>
+        <div class="flex gap-4 mt-2 text-neutral-500">
+          <a href="https://open.spotify.com/artist/1yQKzWOHXJQSEnOXrHDl4X" aria-label="Spotify" target="_blank" rel="noopener noreferrer"><i data-feather="music"></i></a>
+          <a href="https://www.instagram.com/nikita_kering/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i data-feather="instagram"></i></a>
+          <a href="https://x.com/Nikita_Kering" aria-label="X" target="_blank" rel="noopener noreferrer"><i data-feather="twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-neutral-200 py-10 text-center text-sm text-neutral-500">© 2025 the alafia collective</footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
