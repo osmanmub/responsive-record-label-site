@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
       '<div class="alafia-footer__inner">' +
         '<div>' +
           '<a class="alafia-brand alafia-brand--inverse" href="index.html" aria-label="Alafia Collective home">' +
-            '<span class="alafia-brand__mark" aria-hidden="true"><svg viewBox="0 0 288 324" role="img" aria-label="Alafia X mark"><path fill="currentColor" fill-rule="evenodd" d="M0 0h64l22 74L111 0h58l23 74L224 0h64l-53 161 53 163h-64l-24-68-26 68h-64l-24-68-22 68H0l53-163ZM126 126h36l12 35-12 35h-36l-12-35Z" clip-rule="evenodd"/></svg></span>' +
+            '<span class="alafia-brand__mark" aria-hidden="true"><img src="img/alafia-x-mark.svg" alt="" /></span>' +
             '<span class="alafia-brand__wordmark">Alafia Collective</span>' +
           '</a>' +
           '<p class="alafia-footer__statement">Management, label services and publishing for Africa’s next generation of global icons.</p>' +
