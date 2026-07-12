@@ -189,6 +189,15 @@ document.addEventListener('DOMContentLoaded', () => {
       font-size: .94rem;
       line-height: 1.65;
     }
+    .alafia-footer__services {
+      margin: 1.35rem 0 0;
+      color: rgba(242, 240, 235, .48);
+      font-family: 'DM Mono', monospace;
+      font-size: .65rem;
+      letter-spacing: .08em;
+      line-height: 1.6;
+      text-transform: uppercase;
+    }
     .alafia-footer__label {
       margin: 0 0 .9rem;
       color: var(--alafia-accent);
@@ -275,7 +284,8 @@ document.addEventListener('DOMContentLoaded', () => {
             '<span class="alafia-brand__mark" aria-hidden="true"><img src="img/alafia-x-mark.svg" alt="" /></span>' +
             '<span class="alafia-brand__wordmark">Alafia Collective</span>' +
           '</a>' +
-          '<p class="alafia-footer__statement">Management, label services and publishing for Africa’s next generation of global icons.</p>' +
+          '<p class="alafia-footer__statement">Building lasting careers for African artists, songwriters and producers.</p>' +
+          '<p class="alafia-footer__services">Management · Label Services · Publishing</p>' +
         '</div>' +
         '<div>' +
           '<p class="alafia-footer__label">Explore</p>' +
@@ -288,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
           '</ul>' +
         '</div>' +
       '</div>' +
-      '<div class="alafia-footer__meta"><span>© ' + new Date().getFullYear() + ' Alafia Collective</span><span>Africa, without borders</span></div>';
+      '<div class="alafia-footer__meta"><span>© 2026 Alafia Collective. All rights reserved.</span><span>Independent music infrastructure for Africa.</span></div>';
   }
 
   if (window.feather) feather.replace();
