@@ -105,15 +105,34 @@ document.addEventListener('DOMContentLoaded', () => {
       border-radius: 50%;
       box-shadow: 0 0 0 34px rgba(242, 240, 235, .06), 0 0 0 68px rgba(242, 240, 235, .035);
     }
+    .relative.isolate.overflow-hidden.min-h-screen > .max-w-5xl {
+      position: relative;
+      z-index: 1;
+    }
+    .relative.isolate.overflow-hidden.min-h-screen > .max-w-5xl::before {
+      position: absolute;
+      inset: -5rem -8rem;
+      z-index: -1;
+      content: '';
+      background: radial-gradient(ellipse at center, rgba(0, 0, 0, .68), rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+    }
     .relative.isolate h1 {
       max-width: 11ch;
       margin-inline: auto;
+      color: var(--alafia-paper) !important;
       font-size: clamp(3.2rem, 7.4vw, 7.5rem) !important;
       font-weight: 800 !important;
       letter-spacing: -.075em !important;
       line-height: .92 !important;
+      text-shadow: 0 4px 28px rgba(0, 0, 0, .72);
     }
-    .relative.isolate p { max-width: 43rem; margin-inline: auto; color: rgba(255,255,255,.76) !important; }
+    .relative.isolate p {
+      max-width: 43rem;
+      margin-inline: auto;
+      color: rgba(255, 255, 255, .94) !important;
+      text-shadow: 0 2px 16px rgba(0, 0, 0, .78);
+    }
 
     section.py-24 { padding-block: clamp(4.5rem, 9vw, 8rem) !important; }
     .bg-neutral-50 { background: var(--alafia-mist) !important; }
