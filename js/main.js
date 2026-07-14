@@ -295,6 +295,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (rosterItem) rosterItem.insertAdjacentElement('afterend', alumniItem);
     else menu.prepend(alumniItem);
   }
+  if (menu && !menu.querySelector('a[href="services.html"]')) {
+    const servicesItem = document.createElement('li');
+    servicesItem.innerHTML = '<a href="services.html" class="hover:underline">Services</a>';
+    const alumniItem = menu.querySelector('a[href="alumni.html"]')?.closest('li');
+    const rosterItem = menu.querySelector('a[href="roster.html"]')?.closest('li');
+    if (alumniItem) alumniItem.insertAdjacentElement('afterend', servicesItem);
+    else if (rosterItem) rosterItem.insertAdjacentElement('afterend', servicesItem);
+    else menu.prepend(servicesItem);
+  }
   const projectsLink = menu?.querySelector('a[href="events.html"]');
   if (projectsLink) {
     projectsLink.href = 'projects.html';
@@ -318,6 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
           '<p class="alafia-footer__label">Explore</p>' +
           '<ul class="alafia-footer__links">' +
             '<li><a href="roster.html">Current Roster</a></li>' +
+            '<li><a href="services.html">Services</a></li>' +
             '<li><a href="alumni.html">Alumni</a></li>' +
             '<li><a href="playlists.html">Playlists</a></li>' +
             '<li><a href="projects.html">Projects</a></li>' +
